@@ -1,0 +1,8 @@
+.profile {
+  object-fit: contain !important;
+  width: 15rem !important;
+}
+
+.test{
+  height: 100vh;
+}
