@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-/* import styles from '../styles/About.module.css' */
-
+import styles from '../styles/About.module.css'
+import cx from 'classnames'
 const About = () => {
   return (
     <div className="container mx-auto px-4">
@@ -19,13 +19,13 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="mb-10 flex-shrink-0 lg:mt-12 lg:px-4">
+        <div className="about-image_container mb-10 flex-shrink-0 lg:mt-12 lg:px-4">
           <Image
             src="/images/profile_pic.jpeg"
             alt="Profile"
-            priority={true}
-            className="rounded-full "
-            /* className={styles.profile} */
+            /* priority={true} */
+            className={cx(styles.about_image, 'rounded-full')}
+            id="profile"
             width={250}
             height={250}
           />

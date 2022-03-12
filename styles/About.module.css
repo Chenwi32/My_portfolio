@@ -1,8 +1,26 @@
-.profile {
-  object-fit: contain !important;
+/* #profile {
+  object-fit: cover !important;
+  width: 15rem !important;
+} */
+
+.test {
+  height: 100vh;
+}
+
+.rounded_full {
+  border-radius: 99.9999999px;
+}
+
+#profile {
+  object-fit: cover !important;
   width: 15rem !important;
 }
 
-.test{
-  height: 100vh;
+.about_image {
+  width: unset !important;
+  height: 252px !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  min-height: unset !important;
+  max-height: unset !important;
 }

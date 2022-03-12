@@ -1,0 +1,12 @@
+.logo {
+  width: 50px;
+}
+
+.list_item {
+  list-style-type: none;
+  margin-right: 1.5em;
+}
+
+.path {
+  color: black;
+}

@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
+import styles from '../styles/Navigation.module.css'
 
 const Navigation = () => {
   return (
@@ -12,11 +14,44 @@ const Navigation = () => {
               'font-medium uppercase tracking-wider text-gray-900 transition-colors hover:text-sky-500 dark:text-white'
             }
           >
-            Chenwi Eugene
+            <Image
+              src="/images/logo.png"
+              alt="Profile"
+              priority={true}
+              className={styles.logo}
+              id="profile"
+              width={50}
+              height={50}
+            />
           </a>
         </Link>
 
-        <ThemeSwitch/>
+        <div className="nav_right flex items-center justify-between">
+          <ul className='flex items-center'>
+            
+            <li className={styles.list_item}>
+              <Link href={'/about'}>About</Link>
+            </li>
+
+            <li className={styles.list_item}>
+              <Link href={'/about'}>Contact</Link>
+            </li>
+
+            <li className={styles.list_item}>
+              <Link href={'/about'}>Projects</Link>
+            </li>
+
+            <li className={styles.list_item}>
+              <Link href={'/about'}>Resume</Link>
+            </li>
+
+            <li className={styles.list_item}>
+              <Link href={'/about'}>Blog</Link>
+            </li>
+
+          </ul>
+          <ThemeSwitch />
+        </div>
       </div>
     </div>
   )
