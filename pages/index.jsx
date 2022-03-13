@@ -1,9 +1,8 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import About from '../components/About'
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div className="space-y-14 lg:space-y-24">
       <Head>

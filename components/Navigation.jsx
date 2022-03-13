@@ -38,7 +38,7 @@ const Navigation = () => {
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/about'}>Projects</Link>
+              <Link href={'/projects'}>Projects</Link>
             </li>
 
             <li className={styles.list_item}>
