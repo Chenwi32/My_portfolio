@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import About from '../components/About'
+import HomePage from '../components/homePage'
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       </Head>
 
       <main className="mx-auto mt-16 max-w-4xl antialiased">
-        <About />
+        <HomePage />
       </main>
     </div>
   )

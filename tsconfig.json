@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/products/[id].jsx", "pages/_app.jsx", "pages/index.jsx", "pages/projects.jsx", "components/ThemeSwitch.jsx", "components/layout.jsx", "components/Navigation.jsx", "components/About.jsx", "components/Footer.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/products/[id].jsx", "pages/_app.jsx", "pages/index.jsx", "pages/projects.jsx", "components/ThemeSwitch.jsx", "components/layout.jsx", "components/Navigation.jsx", "components/homePage.jsx", "components/Footer.jsx"],
   "exclude": ["node_modules"]
 }

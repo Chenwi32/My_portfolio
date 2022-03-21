@@ -34,7 +34,7 @@ const Navigation = () => {
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/about'}>Contact</Link>
+              <Link href={'/contact'}>Contact</Link>
             </li>
 
             <li className={styles.list_item}>
@@ -42,11 +42,11 @@ const Navigation = () => {
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/about'}>Resume</Link>
+              <Link href={'/resume'}>Resume</Link>
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/about'}>Blog</Link>
+              <Link href={'/blog'}>Blog</Link>
             </li>
 
           </ul>

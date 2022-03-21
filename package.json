@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
+    "embla-carousel-autoplay": "^6.2.0",
+    "embla-carousel-react": "^6.2.0",
     "next": "latest",
     "next-themes": "^0.1.1",
     "react": "^17.0.2",
