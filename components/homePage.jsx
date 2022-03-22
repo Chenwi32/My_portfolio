@@ -7,7 +7,7 @@ import EmblaCarousel from '../components/emblacarousel'
 const HomePage = () => {
   return (
     <div className="container mx-auto px-4">
-      <div className="item-center flex flex-col-reverse text-center lg:-mx-4 lg:flex lg:flex-row lg:space-x-5 lg:text-left">
+      <div className="item-center flex-col text-center lg:-mx-4 lg:space-x-5 ">
         <div className="about-image_container mb-10 flex-shrink-0 lg:mt-12 lg:px-4">
           <Image
             src="/images/profile_pic.jpeg"
@@ -20,15 +20,13 @@ const HomePage = () => {
           />
         </div>
 
-        <div className="lg:mt-12 lg:px-4 ">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white lg:text-5xl">
-            Chenwi Eugene
-          </h1>
+        <div className=" lg:mt-10   lg:px-4">
+          <h2 className={cx(styles.title, 'text-2xl lg:text-3xl')}>Chenwi Eugene</h2>
           <EmblaCarousel />
         </div>
       </div>
     </div>
   )
-}
+} /* dark:text-white font-bold */
 
 export default HomePage

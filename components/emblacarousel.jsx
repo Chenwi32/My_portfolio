@@ -15,9 +15,21 @@ export const EmblaCarousel = () => {
   return (
     <div className={styles.embla} ref={emblaRef}>
       <div className={styles.embla__container}>
-        <div className={styles.embla__slide}>Slide 1</div>
-        <div className={styles.embla__slide}>Slide 2</div>
-        <div className={styles.embla__slide}>Slide 3</div>
+        <div className={styles.embla__slide}>
+          <p className={styles.homepage_p}>Web Developer</p>
+        </div>
+        <div className={styles.embla__slide}>
+          <p className={styles.homepage_p}>UI/UX Designer</p>
+        </div>
+        <div className={styles.embla__slide}>
+          <p className={styles.homepage_p}>Digital Marketer</p>
+        </div>
+        <div className={styles.embla__slide}>
+          <p className={styles.homepage_p}>Entrepreneur</p>
+        </div>
+        <div className={styles.embla__slide}>
+          <p className={styles.homepage_p}>Building Construction Technician</p>
+        </div>
       </div>
     </div>
   )

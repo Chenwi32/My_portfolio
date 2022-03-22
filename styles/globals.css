@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-container{
+    min-height: 60vh;
+}

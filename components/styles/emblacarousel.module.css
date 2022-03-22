@@ -1,5 +1,6 @@
 .embla {
   overflow: hidden;
+  margin: 2em 1em;
 }
 .embla__container {
   display: flex;
@@ -7,4 +8,11 @@
 .embla__slide {
   position: relative;
   flex: 0 0 100%;
+  font-size: 1.5rem;
+}
+
+.homepage_p {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #F5A822;
 }
