@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
 import styles from '../styles/Navigation.module.css'
+import cx from 'classnames'
 
 const Navigation = () => {
   return (
@@ -27,14 +28,9 @@ const Navigation = () => {
         </Link>
 
         <div className="nav_right flex items-center justify-between">
-          <ul className='flex items-center'>
-            
+          <ul className="flex items-center">
             <li className={styles.list_item}>
               <Link href={'/about'}>About</Link>
-            </li>
-
-            <li className={styles.list_item}>
-              <Link href={'/contact'}>Contact</Link>
             </li>
 
             <li className={styles.list_item}>
@@ -49,6 +45,9 @@ const Navigation = () => {
               <Link href={'/blog'}>Blog</Link>
             </li>
 
+            <li className={cx(styles.list_item, 'btn')}>
+              <Link href={'/contact'}>Contact</Link>
+            </li>
           </ul>
           <ThemeSwitch />
         </div>

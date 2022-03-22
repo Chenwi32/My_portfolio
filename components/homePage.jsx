@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className="item-center flex-col text-center lg:-mx-4 lg:space-x-5 ">
         <div className="about-image_container mb-10 flex-shrink-0 lg:mt-12 lg:px-4">
           <Image
-            src="/images/profile_pic.jpeg"
+            src="/images/profile.jpg"
             alt="Profile"
             /* priority={true} */
             className={cx(styles.about_image, 'rounded-full')}

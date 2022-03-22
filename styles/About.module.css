@@ -17,11 +17,10 @@
 }
 
 .about_image {
-  width: unset !important;
-  height: 252px !important;
+  width: 100% !important;
   min-width: unset !important;
   max-width: unset !important;
-  min-height: unset !important;
   max-height: unset !important;
-  border: 5.1px #F5A822 solid !important;
+  border: 2px #F5A822 solid !important;
+  object-fit: cover;
 }
