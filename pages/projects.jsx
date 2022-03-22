@@ -6,18 +6,11 @@ import React, { useEffect, useState } from 'react'
 // }
 
 function projects() {
-  const [users, setUsers] = useState(null)
-  useEffect(async function userList() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    const usersList = await response.json()
-    setUsers(usersList)
-  }, [])
+
   return (
-    <ul>
-      {users && users.map((user) => {
-        return <li key={user.id}>{user.name}</li>
-      })}
-    </ul>
+    <div>
+     <h1>My projects</h1>
+    </div>
   )
 }
 
