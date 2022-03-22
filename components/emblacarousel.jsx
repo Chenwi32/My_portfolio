@@ -18,9 +18,7 @@ export const EmblaCarousel = () => {
         <div className={styles.embla__slide}>
           <p className={styles.homepage_p}>Web Developer</p>
         </div>
-        <div className={styles.embla__slide}>
-          <p className={styles.homepage_p}>UI/UX Designer</p>
-        </div>
+        
         <div className={styles.embla__slide}>
           <p className={styles.homepage_p}>Digital Marketer</p>
         </div>
