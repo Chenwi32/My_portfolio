@@ -21,6 +21,8 @@
   min-width: unset !important;
   max-width: unset !important;
   max-height: unset !important;
-  border: 2px #F5A822 solid !important;
-  object-fit: cover;
+  border: 2px #f5a822 solid !important;
+  object-fit: fill;
+
+  filter: grayscale(0.2) blur(0) brightness(1.5) contrast(0.9);
 }

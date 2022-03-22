@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-container{
-    min-height: 60vh;
+.main-container {
+  min-height: 60vh;
+  height: 100%;
 }
 
-.btn{
-    background-color: #F5A822;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    font-weight: 800;
+.btn {
+  background-color: #f5a822;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background-color: #da9319;
+  
 }
