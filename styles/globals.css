@@ -8,8 +8,7 @@
 }
 
 .main-container {
-  min-height: 68vh;
-  height: 100%;
+  min-height: 64.9vh;
 }
 
 .btn {
@@ -42,8 +41,7 @@
   font-family: serif;
   font-weight: 800;
 
-  padding: 0.2em 0.7em;
   border-bottom: 3px solid #05bd33;
   width: fit-content;
-  margin: 1em auto 1.5em;
+  margin: 0 0 1em;
 }

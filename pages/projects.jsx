@@ -45,7 +45,7 @@ function projects() {
             </div>
           </div>
 
-          <div className="projects__item rightslides">
+          <div className="projects__item rightslides2">
             <Image
               src="/images/profile.png"
               alt="Profile"
@@ -82,7 +82,7 @@ function projects() {
             </div>
           </div>
 
-          <div className="projects__item leftslides">
+          <div className="projects__item leftslides2">
             <Image
               src="/images/profile.png"
               alt="Profile"

@@ -30,7 +30,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 2em;
   border-radius: 10px;
   transition: 0.5s ease-in;
@@ -55,7 +54,6 @@
 
 @keyframes slideInFromLeft {
   0% {
-    
     transform: translateX(-100%);
   }
   100% {
@@ -72,6 +70,24 @@
   }
 }
 
+@keyframes slideInFromtop {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFrombottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .leftslides {
   animation: slideInFromLeft 1s ease-in-out
     /* timing-function delay iteration-count direction fill-mode */;
@@ -79,4 +95,12 @@
 
 .rightslides {
   animation: slideInFromRight 1s ease-in-out;
+}
+
+.leftslides2 {
+  animation: slideInFromtop 1s ease-in-out;
+}
+
+.rightslides2 {
+  animation: slideInFrombottom 1s ease-in-out;
 }
