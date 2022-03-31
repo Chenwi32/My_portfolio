@@ -1,4 +1,11 @@
 .footer{
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 2em;
+    padding-top: 0;
+    border-top: #05bd33 solid 1px;
+
+}
+
+.footer__link:hover{
+    color: #05bd33;
 }

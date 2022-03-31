@@ -2,19 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+.secondary_container {
+  max-width: 1300px;
+  margin: auto;
+}
+
 .main-container {
-  min-height: 60vh;
+  min-height: 68vh;
   height: 100%;
 }
 
 .btn {
-  background-color: #f5a822;
+  background-color: #05bd33;
   padding: 0.5em 1em;
   border-radius: 5px;
   font-weight: 800;
+  color: #ffff; 
 }
 
 .btn:hover {
-  background-color: #da9319;
-  
+  background-color: #038a25;
+}
+
+.btn2 {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 2px dotted #FFF;
+  font-weight: 600;
+  color: #ffff;
+}
+
+.btn2:hover {
+  box-shadow: 0 0 10px #000;
+}
+
+.title {
+  font-size: 2rem;
+  font-family: serif;
+  font-weight: 800;
+
+  padding: 0.2em 0.7em;
+  border-bottom: 3px solid #05bd33;
+  width: fit-content;
+  margin: 1em auto 1.5em;
 }

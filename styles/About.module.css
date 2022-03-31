@@ -1,28 +1,22 @@
-/* #profile {
-  object-fit: cover !important;
-  width: 15rem !important;
-} */
 
-.test {
+/* .test {
   height: 100vh;
 }
-
+ */
 .rounded_full {
   border-radius: 99.9999999px;
 }
 
-#profile {
-  object-fit: cover !important;
-  width: 15rem !important;
-}
 
 .about_image {
   width: 100% !important;
   min-width: unset !important;
   max-width: unset !important;
   max-height: unset !important;
-  border: 2px #f5a822 solid !important;
+  border: 2px #05bd33 solid !important;
   object-fit: fill;
 
-  filter: grayscale(0.2) blur(0) brightness(1.5) contrast(0.9);
+  background-color: #FFFFFF;
+
+  
 }

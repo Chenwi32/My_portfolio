@@ -6,7 +6,7 @@ function Layout({ children }) {
   return (
     <ThemeProvider attribute="class" enableSystem={false}>
       <Navigation />
-      <main className="main-container">{children}</main>
+      <main className="main-container container mx-auto">{children}</main>
       <Footer />
     </ThemeProvider>
   )

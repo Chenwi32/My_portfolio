@@ -7,6 +7,10 @@
   margin-right: 1.5em;
 }
 
+.list_item:hover {
+  border-bottom: 1px solid;
+}
+
 .path {
   color: black;
 }

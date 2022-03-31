@@ -10,7 +10,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="mx-auto mt-16 max-w-4xl antialiased">
+      <main className="mx-auto  max-w-4xl antialiased">
         <HomePage />
       </main>
     </div>

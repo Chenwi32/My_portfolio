@@ -1,6 +1,6 @@
 const blog = () => {
   return (
-    <div>
+    <div className="secondary_container">
       <h1>Blogs</h1>
     </div>
   )
