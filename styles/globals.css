@@ -16,12 +16,13 @@
   padding: 0.5em 1em;
   border-radius: 5px;
   font-weight: 800;
-  color: #ffff; 
+  color: #ffff;
 }
 
 .btn:hover {
   background-color: #038a25;
 }
+
 
 .btn2 {
   margin-top: 1em;
@@ -37,11 +38,11 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: serif;
   font-weight: 800;
 
   border-bottom: 3px solid #05bd33;
   width: fit-content;
-  margin: 0 0 1em;
+  margin: 0 0 1.2em;
 }

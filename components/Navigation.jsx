@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
-import styles from '../styles/Navigation.module.css'
+import styles from './styles/Navigation.module.css'
 import cx from 'classnames'
 
 /* lg:max-w-4xl px-4*/
@@ -32,23 +32,33 @@ const Navigation = () => {
         <div className="nav_right flex items-center justify-between">
           <ul className="flex items-center">
             <li className={styles.list_item}>
-              <Link href={'/'}>Home</Link>
+              <span className={styles.link_container}>
+                <Link href={'/'}>Home</Link>
+              </span>
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/about'}>About</Link>
+              <span className={styles.link_container}>
+                <Link href={'/about'}>About</Link>
+              </span>
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/projects'}>Projects</Link>
+              <span className={styles.link_container}>
+                <Link href={'/projects'}>Projects</Link>
+              </span>
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/resume'}>Resume</Link>
+              <span className={styles.link_container}>
+                <Link href={'/resume'}>Resume</Link>
+              </span>
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/blog'}>Blog</Link>
+              <span className={styles.link_container}>
+                <Link href={'/blog'}>Blog</Link>
+              </span>
             </li>
 
             <li className={cx('btn')}>

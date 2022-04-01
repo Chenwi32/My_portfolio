@@ -1,8 +1,10 @@
 .embla {
   overflow: hidden;
-  margin: 2em 1em;
+  margin: 1em auto;
+  width: 300px;
 }
 .embla__container {
+  
   display: flex;
 }
 .embla__slide {

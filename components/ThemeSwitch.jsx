@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import cx from 'classnames'
-import styles from '../styles/Navigation.module.css'
+import styles from './styles/Navigation.module.css'
 
 
 const ThemeSwitch = () => {
