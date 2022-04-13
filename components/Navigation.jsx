@@ -23,8 +23,8 @@ const Navigation = () => {
               priority={true}
               className={styles.logo}
               id="profile"
-              width={50}
-              height={50}
+              width={100}
+              height={60}
             />
           </a>
         </Link>
