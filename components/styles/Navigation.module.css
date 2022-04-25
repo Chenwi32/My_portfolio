@@ -1,10 +1,6 @@
-.logo {
-  width: 50px;
-}
-
 .list_item {
   list-style-type: none;
-  margin-right: 1.5em;
+  margin-right: 1em;
 }
 
 .list_item:hover {

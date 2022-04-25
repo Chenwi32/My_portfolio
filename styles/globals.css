@@ -2,8 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  background: linear-gradient(
+    35deg,
+    hsl(135deg 100% 92%) 0%,
+    hsl(135deg 100% 93%) 6%,
+    hsl(135deg 100% 94%) 11%,
+    hsl(134deg 100% 95%) 16%,
+    hsl(134deg 100% 96%) 21%,
+    hsl(134deg 100% 97%) 25%,
+    hsl(133deg 100% 98%) 29%,
+    hsl(134deg 100% 97%) 33%,
+    hsl(134deg 100% 96%) 37%,
+    hsl(134deg 100% 95%) 40%,
+    hsl(135deg 100% 93%) 44%,
+    hsl(135deg 100% 92%) 47%,
+    hsl(135deg 100% 92%) 50%,
+    hsl(135deg 100% 93%) 53%,
+    hsl(134deg 100% 95%) 56%,
+    hsl(134deg 100% 96%) 59%,
+    hsl(134deg 100% 97%) 61%,
+    hsl(133deg 100% 98%) 64%,
+    hsl(134deg 100% 97%) 67%,
+    hsl(134deg 100% 96%) 71%,
+    hsl(134deg 100% 95%) 74%,
+    hsl(135deg 100% 94%) 78%,
+    hsl(135deg 100% 93%) 84%,
+    hsl(135deg 100% 92%) 98%
+  );
+}
+
+[data-theme='dark'],
+[data-theme='dark'] html,
+[data-theme='dark'] body {
+  color: #fff;
+  background: #000;
+}
+
 .secondary_container {
-  max-width: 1300px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -23,12 +61,11 @@
   background-color: #038a25;
 }
 
-
 .btn2 {
   margin-top: 1em;
   padding: 0.5em 1em;
   border-radius: 5px;
-  border: 2px dotted #FFF;
+  border: 2px dotted #fff;
   font-weight: 600;
   color: #ffff;
 }

@@ -1,11 +1,14 @@
-.footer{
-    margin-bottom: 0;
-    padding-bottom: 2em;
-    padding-top: 0;
-    border-top: #05bd33 solid 1px;
+.footer {
+  margin-bottom: 0;
+  padding-bottom: 2em;
+  padding-top: 0;
 
 }
 
-.footer__link:hover{
-    color: #05bd33;
+.footer__link {
+  font-weight: 600;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
 }

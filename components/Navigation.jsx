@@ -9,7 +9,7 @@ import cx from 'classnames'
 
 const Navigation = () => {
   return (
-    <div className="sticky top-0 z-20 bg-white py-2 dark:bg-black md:mb-6 md:py-6">
+    <div className="sticky top-0 z-20 py-2  md:mb-6 md:py-1">
       <div className="container mx-auto flex items-center justify-between  ">
         <Link href="/">
           <a
@@ -29,7 +29,7 @@ const Navigation = () => {
           </a>
         </Link>
 
-        <div className="nav_right flex items-center justify-between">
+        <div className="nav_right flex items-center justify-between dark:text-white">
           <ul className="flex items-center">
             <li className={styles.list_item}>
               <span className={styles.link_container}>

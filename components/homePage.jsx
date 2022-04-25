@@ -7,7 +7,7 @@ import EmblaCarousel from '../components/emblacarousel'
 const HomePage = () => {
   return (
     <div className="container mx-auto px-4">
-      <div className="item-center flex-col text-center lg:-mx-4  lg:space-x-5">
+      <div className="home__page item-center flex-col text-center lg:-mx-4  lg:space-x-5">
         <div className="about-image_container flex-shrink-0  lg:px-4">
           <Image
             src="/images/profile.png"
