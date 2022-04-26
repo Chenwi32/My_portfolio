@@ -1,22 +1,28 @@
-
-/* .test {
-  height: 100vh;
-}
- */
-.rounded_full {
-  border-radius: 99.9999999px;
-}
-
-
-.about_image {
-  width: 100% !important;
-  min-width: unset !important;
-  max-width: unset !important;
-  max-height: unset !important;
+.about_image_container {
   border: 2px #05bd33 solid !important;
-  object-fit: fill;
+  width: fit-content;
+  height: 100%;
+  border-radius: 49%;
+  margin: 0 auto;
+  background-color: #ffff;
+  display: flex;
+  align-items: center;
+}
 
-  background-color: #FFFFFF;
+.image {
+  width: 250px;
+  height: 250px;
+  border-radius: 49%;
 
-  
+  background-image: url('../public/images/profile.png')   ;
+
+  background-size:  100%;
+  background-position: center;
+  background-repeat: no-repeat ;
+
+  transition: 0.7s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.03);
 }
