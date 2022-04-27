@@ -22,11 +22,11 @@ function Layout({ children }) {
       enableSystem={false}
     >
       <Navigation />
-      <div className='secondary_container  flex layout__content'>
+      <div className="secondary_container  layout__content flex">
         <main className=" main__content_container container mx-auto">
           {children}
         </main>
-        <aside className="asside">
+        <aside className="asside justify-center flex">
           <h5>Advertisements</h5>
         </aside>
       </div>
