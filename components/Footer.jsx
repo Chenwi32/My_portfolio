@@ -6,10 +6,10 @@ const Footer = () => {
     <div
       className={cx(
         styles.footer,
-        'lg:mt-18 mx-auto mt-12 py-6 sm:py-12 sm:pb-36'
+        'lg:mt-18 mx-auto mt-12 py-6 sm:py-12 sm:pb-36 '
       )}
     >
-      <div className=" flex flex-wrap items-center justify-center space-x-2 px-4 pt-2 font-medium text-gray-800 dark:text-white sm:space-x-4 lg:pt-0">
+      <div className=" flex flex-wrap items-center justify-center container space-x-2 px-4 pt-2 font-medium text-gray-800 dark:text-white sm:space-x-4 lg:pt-0">
         <a
           href="#"
           className={cx(styles.footer__link, 'footer__links transition-colors')}

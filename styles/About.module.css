@@ -1,5 +1,6 @@
 .about_image_container {
-  border: 2px #05bd33 solid !important;
+  /* border: 2px dotted rgba(5, 181, 52, 0.452) !important; */
+  box-shadow: 0 0 10px rgba(5, 181, 52, 0.384) !important;
   width: fit-content;
   height: 100%;
   border-radius: 49%;
@@ -7,6 +8,7 @@
   background-color: #ffff;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .image {
@@ -14,19 +16,25 @@
   height: 250px;
   border-radius: 49%;
 
-  background-image: url('../public/images/profile.png')   ;
+  background-image: url('../public/images/profile.png');
 
-  background-size:  100%;
+  background-size: 100%;
   background-position: center;
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
 
-  transition: 0.7s ease-in-out;
+/* 
+   transform-origin: 0 0; 
+
+   transition: transform .5s, visibility .5s ease-in;
+*/
+    transform-origin: 65% 75%;
+  transition: transform 1s, filter .5s ease-out;
 }
 
 .image:hover {
-  transform: scale(1.03);
+  transform: scale(1.1);
 }
 
-.about p{
-  padding: 0 1em 1em ;
+.about p {
+  padding: 0 1em 1em;
 }
