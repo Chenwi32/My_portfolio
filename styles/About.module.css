@@ -26,3 +26,7 @@
 .image:hover {
   transform: scale(1.03);
 }
+
+.about p{
+  padding: 0 1em 1em ;
+}

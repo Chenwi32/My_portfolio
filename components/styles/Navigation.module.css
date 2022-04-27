@@ -1,3 +1,17 @@
+.nav{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+
+background-image: linear-gradient(
+  270deg,
+  hsl(135deg 94% 87%) 0%,
+  hsl(133deg 96% 92%) 1%,
+  hsl(132deg 98% 98%) 10%,
+  hsl(133deg 100% 98%) 58%,
+  hsl(134deg 98% 94%) 97%,
+  hsl(136deg 96% 89%) 100%
+);
+}
+
 .list_item {
   list-style-type: none;
   margin-right: 1em;

@@ -2,7 +2,7 @@ import styles from '../styles/resume.module.css'
 
 const resume = () => {
   return (
-    <div className="secondary_container">
+    <div className="resume">
       <h1 className="title">My Resume</h1>
 
       <iframe

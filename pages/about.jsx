@@ -1,6 +1,7 @@
+import styles from '../styles/About.module.css'
 const about = () => {
   return (
-    <div className="secondary_container">
+    <div className={styles.about}>
       <h1 className="title">About Me</h1>
       <p>
         First, I will like to thank you for taking your precious to know me. I

@@ -22,8 +22,13 @@ function Layout({ children }) {
       enableSystem={false}
     >
       <Navigation />
-      <main className="main-container container mx-auto">{children}</main>
+      <main className=" secondary_container  container mx-auto">
+        
+        {children}
+        
+      </main>
       <Footer />
+      
     </ThemeProvider>
   )
 }

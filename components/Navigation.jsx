@@ -9,8 +9,8 @@ import cx from 'classnames'
 
 const Navigation = () => {
   return (
-    <div className="sticky top-0 z-20 py-2  md:mb-6 md:py-1">
-      <div className="container mx-auto flex items-center justify-between  ">
+    <div className={cx(styles.nav, "nav sticky top-0 z-20 py-2  md:mb-0 md:py-1") }>
+      <div className="nav__container container mx-auto flex items-center justify-between  ">
         <Link href="/">
           <a
             className={
