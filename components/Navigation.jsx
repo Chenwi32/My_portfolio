@@ -9,7 +9,9 @@ import cx from 'classnames'
 
 const Navigation = () => {
   return (
-    <div className={cx(styles.nav, "nav sticky top-0 z-20 py-2  md:mb-0 md:py-1") }>
+    <div
+      className={cx(styles.nav, 'nav sticky top-0 z-20 py-2  md:mb-0 md:py-1')}
+    >
       <div className="nav__container container mx-auto flex items-center justify-between  ">
         <Link href="/">
           <a
@@ -65,7 +67,13 @@ const Navigation = () => {
               <Link href={'/contact'}>Contact</Link>
             </li>
           </ul>
-          <ThemeSwitch />
+
+          <div className={cx(styles.hover__message, styles.tooltip)}>
+            <ThemeSwitch />
+            <span className={styles.tooltiptext}>
+              Dark mode hasn't been fully implemented, we're still working on it!!
+            </span>
+          </div>
         </div>
       </div>
     </div>
