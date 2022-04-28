@@ -2,6 +2,7 @@ import Navigation from './Navigation'
 import Footer from './Footer'
 /* import { createGlobalStyle } from 'styled-components' */
 import { ThemeProvider } from 'next-themes'
+import ChatBot from './ChatBot'
 
 /* // Your themeing variables
 const GlobalStyle = createGlobalStyle`
@@ -15,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     --bg: #000;
   }` */
 function Layout({ children }) {
+
+
   return (
     <ThemeProvider
       themes={['light', 'dark']}
@@ -26,9 +29,13 @@ function Layout({ children }) {
         <main className=" main__content_container container mx-auto">
           {children}
         </main>
-        <aside className="asside justify-center flex">
+        <div className="sidebar__container">
+          <aside className="asside justify-center flex">
           <h5>Advertisements</h5>
-        </aside>
+          </aside>
+          <ChatBot/>
+        </div>
+        
       </div>
 
       <Footer />

@@ -105,3 +105,10 @@ body {
   border-bottom: 5px solid #05bd33;
   margin: 0 0 1.2em;
 }
+
+
+.imojie{
+  font-size: 1.2rem;
+  color: rgb(47, 214, 5);
+  font-weight: 800;
+}

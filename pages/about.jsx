@@ -4,8 +4,9 @@ const about = () => {
     <div className={styles.about}>
       <h1 className="title">About Me</h1>
       <p>
-        First, I will like to thank you for taking your precious to know me. I
-        am just a no body trying to gain value in your eyes
+        First, I will like to thank you for taking your precious time to know
+        about me. I am just a nobody trying to gain value in your eyes
+        <span className="imojie"> &#x1F60E;</span>
       </p>
 
       <p>

@@ -71,7 +71,7 @@ const Navigation = () => {
           <div className={cx(styles.hover__message, styles.tooltip)}>
             <ThemeSwitch />
             <span className={styles.tooltiptext}>
-              Dark mode hasn't been fully implemented, we're still working on it!!
+              Dark mode hasn't been fully implemented, I'm still working on it!!
             </span>
           </div>
         </div>
