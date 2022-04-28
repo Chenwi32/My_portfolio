@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html,
 body {
+
+  /* Hide Scroolbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
   background: linear-gradient(
     35deg,
     hsl(135deg 100% 92%) 0%,
@@ -43,8 +52,10 @@ body {
 .secondary_container {
   height: 100%;
   min-height: 75vh;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  padding: 0 1em;
 }
 
 .main__content_container {
@@ -56,6 +67,8 @@ body {
   height: fit-content;
   min-width: 300px;
   padding: 2em;
+  position: sticky;
+    top: 5.5em;
 }
 
 .main__content_container,
@@ -64,7 +77,8 @@ body {
   background-color: rgba(255, 255, 255, 0.726);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
   border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; 
+  border-top-right-radius: 15px; 
+  margin-top: 1em;
 }
 
 .layout__content {
@@ -73,14 +87,14 @@ body {
 
 .btn {
   background-color: #05bd33;
-  padding: 0.5em 1em;
+  padding: 1em ;
   border-radius: 5px;
   font-weight: 800;
   color: #ffff;
 }
 
 .btn:hover {
-  background-color: #038a25;
+  background-color: #07d83b;
 }
 
 .title {
