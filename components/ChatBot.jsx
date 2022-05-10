@@ -2,9 +2,9 @@ import styles from "./styles/ChatBot.module.css"
 
 const ChatBot = () => {
     return (
-      <div class= {styles.chat__bot}>
-        <div class="bot slide">
-          <div class="ifr__header">
+      <div className={ styles.chat__bot}>
+        <div className="bot slide ">
+          <div className="ifr__header">
             <p>X</p>
           </div>
           <iframe
