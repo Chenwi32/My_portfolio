@@ -1,4 +1,6 @@
 .chat__bot{
-    position: sticky;
-    top: 20em;
+    position: fixed;
+    bottom: 15em;
+    right: 3em;
+    height: 200px;
 }
