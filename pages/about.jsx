@@ -10,17 +10,11 @@ const about = () => {
       </p>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-        officiis quis et, tenetur cum est sit sunt cupiditate, id a ipsam magni,
-        animi dicta consequatur itaque ea? Reprehenderit consequatur deleniti,
-        neque minima doloribus illo nostrum esse sapiente aliquam. Earum quo
-        culpa aliquam eligendi ipsa minus quam velit! Eum, incidunt recusandae.
-        Exercitationem, animi labore molestias minus nobis mollitia praesentium
-        placeat ad consectetur quo ratione deleniti similique dignissimos velit.
-        Iure sequi, officiis, quo quod quasi, asperiores distinctio numquam
-        aliquid ut reprehenderit velit quas. Reiciendis tempora porro aspernatur
-        culpa ea perferendis necessitatibus magnam, amet, iste velit suscipit
-        perspiciatis molestias repellendus, nostrum a nobis.
+        <strong>Let me introduce nyself formaly</strong>
+        <span className="imojie2">&#x263A;</span> <br />
+        My Name is Chenwi Eugene. I am from Cameroon a country in West Africa. <br />
+        ...{/* I am driven
+        by the hunger for common solutions to problems that plague the day to day life of the common man. */}
       </p>
     </div>
   )

@@ -27,6 +27,6 @@ const HomePage = () => {
       </div>
     </div>
   )
-} /* dark:text-white font-bold */
+} 
 
 export default HomePage

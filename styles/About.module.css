@@ -1,5 +1,5 @@
 .about_image_container {
-  /* border: 2px dotted rgba(5, 181, 52, 0.452) !important; */
+
   box-shadow: 0 0 10px rgba(5, 181, 52, 0.384) !important;
   width: fit-content;
   height: 100%;
@@ -22,11 +22,6 @@
   background-position: center;
   background-repeat: no-repeat;
 
-/* 
-   transform-origin: 0 0; 
-
-   transition: transform .5s, visibility .5s ease-in;
-*/
     transform-origin: 65% 75%;
   transition: transform 1s, filter .5s ease-out;
 }

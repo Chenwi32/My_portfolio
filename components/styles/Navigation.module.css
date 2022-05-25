@@ -14,17 +14,16 @@
 
 .list_item {
   list-style-type: none;
-  margin-right: .5em;
-  padding: 1em;
-  border-radius: 5px;
-}
-
-.list_item:hover {
-  background-color: #05bd331e;
+  margin-right: 0.5em;
 }
 
 .link_container {
-  padding: 0.6em 0;
+  padding: 0.9em;
+  border-radius: 5px;
+}
+
+.link_container:hover {
+  background-color: #05bd331e;
 }
 
 .path {
@@ -50,7 +49,7 @@
   left: 20%;
   margin-left: -150px;
   opacity: 0;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .tooltip .tooltiptext::after {

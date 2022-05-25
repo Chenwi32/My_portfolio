@@ -24,7 +24,11 @@ function Layout({ children }) {
       attribute="class"
       enableSystem={false}
     >
+      
       <Navigation />
+
+      <div className="layout_container flex flex-col">
+       
       <div className="secondary_container  layout__content flex">
         <main className=" main__content_container container mx-auto">
           {children}
@@ -38,7 +42,12 @@ function Layout({ children }) {
         
       </div>
 
-      <Footer />
+        <div className="layout_footer_position">
+          <Footer />
+        </div>
+      
+      </div>
+      
     </ThemeProvider>
   )
 }
