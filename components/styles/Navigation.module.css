@@ -67,3 +67,15 @@
   visibility: visible;
   opacity: 1;
 }
+
+
+@media (max-width: 770px) {
+  .list_item {
+  margin-right: 0.2em;
+}
+
+.link_container {
+  padding: 0.7em 0.5em;
+  border-radius: 5px;
+}
+}

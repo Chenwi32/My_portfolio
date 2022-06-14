@@ -56,6 +56,7 @@ const about = () => {
       
          <ul className={styles.list}>
         <li>VS Code</li>
+        <li>Chrome Browser</li>
         <li>Git/GitHub</li>
         <li>Firebase &#x1F525;</li>
         <li>Netlify</li>
