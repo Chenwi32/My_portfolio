@@ -1,5 +1,4 @@
 .about_image_container {
-
   box-shadow: 0 0 10px rgba(5, 181, 52, 0.384) !important;
   width: fit-content;
   height: 100%;
@@ -22,8 +21,8 @@
   background-position: center;
   background-repeat: no-repeat;
 
-    transform-origin: 65% 75%;
-  transition: transform 1s, filter .5s ease-out;
+  transform-origin: 65% 75%;
+  transition: transform 1s, filter 0.5s ease-out;
 }
 
 .image:hover {
@@ -32,4 +31,18 @@
 
 .about p {
   padding: 0 1em 1em;
+}
+
+
+.tools_image {
+  margin: 1em 0;
+  box-shadow: 0 5px 10px 0 rgba(5, 181, 52, 0.384) !important;  
+  border-radius: 15px;
+  object-fit: cover;
+  height: 100% !important;
+}
+
+.list{
+  list-style-type: disc;
+  padding: 0 2em 1em;
 }

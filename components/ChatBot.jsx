@@ -14,7 +14,7 @@ const ChatBot = () => {
             src="https://console.dialogflow.com/api-client/demo/embedded/91e0510f-91f4-438f-98fa-ab405bee404a"
           ></iframe>
         </div>
-        <i class="fas fa-comment-dots"></i>
+        <i className="fas fa-comment-dots"></i>
       </div>
     )
 }

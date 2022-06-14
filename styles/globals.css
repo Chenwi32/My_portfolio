@@ -103,6 +103,15 @@ body {
   margin: 0 0 1.2em;
 }
 
+.secondary_title {
+  font-size: 1.3rem;
+  font-family: serif;
+  font-weight: 800;
+  width: fit-content;
+  margin: 0 0 .5em;
+  color: #05bd33;
+}
+
 .imojie {
   font-size: 1.6rem;
   color: rgb(47, 214, 5);
