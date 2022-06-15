@@ -30,7 +30,7 @@ function Layout({ children }) {
       <div className="layout_container flex flex-col">
        
       <div className="secondary_container  layout__content flex">
-        <main className=" main__content_container container mx-auto">
+        <main className=" main__content_container  mx-auto">
           {children}
         </main>
         <div className="sidebar__container">

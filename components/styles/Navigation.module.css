@@ -10,6 +10,7 @@
     hsl(134deg 98% 94%) 97%,
     hsl(136deg 96% 89%) 100%
   );
+  width: fit-content;
 }
 
 .list_item {
