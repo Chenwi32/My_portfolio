@@ -10,7 +10,7 @@
     hsl(134deg 98% 94%) 97%,
     hsl(136deg 96% 89%) 100%
   );
-  width: fit-content;
+  width: 100%;
 }
 
 .list_item {
@@ -71,6 +71,11 @@
 
 
 @media (max-width: 770px) {
+
+.nav {
+width: fit-content;
+}
+
   .list_item {
   margin-right: 0.2em;
 }

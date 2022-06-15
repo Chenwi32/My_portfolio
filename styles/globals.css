@@ -50,7 +50,7 @@ body {
 }
 
 .secondary_container {
-  min-height: 60vh;
+  min-height: 70vh;
   max-width: 1200px;
   min-width: 500px;
   margin: 0 auto;
@@ -140,7 +140,7 @@ body {
 .layout_container {
   min-height: 88.7vh;
   height: 100%;
-  width: fit-content;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -177,6 +177,10 @@ body {
     border-top-right-radius: unset;
     margin-top: 1em;
   }
+
+  .layout_container {
+  width: fit-content;
+}
 
   .layout_footer_position {
     margin-bottom: auto;
