@@ -52,16 +52,18 @@ body {
   min-height: 70vh;
   max-width: 1200px;
   width: 100%;
+  display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
   padding: 1em;
 }
 
 .main__content_container {
-  padding: 2em 3em 0.3em;
+  padding: 2em 3em;
   min-width: 500px;
-  width: fit-content;
+  width: 100%;
   margin: 0;
+  width: 60%;
 }
 
 .asside {
@@ -80,7 +82,6 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
-  margin: 1em ;
 }
 
 .btn {
@@ -183,7 +184,7 @@ body {
   }
 
   .layout_container {
-    width: fit-content;
+    width: 100%;
     padding: 1em 1em 0;
   }
 
