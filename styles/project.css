@@ -93,9 +93,8 @@
   }
 }
 
-.leftslides {
-  animation: slideInFromLeft 1s ease-in-out
-    /* timing-function delay iteration-count direction fill-mode */;
+/* .leftslides {
+  animation: slideInFromLeft 1s ease-in-out;
 }
 
 .rightslides {
@@ -109,3 +108,4 @@
 .topmslide {
   animation: slideInFrombottom 1s ease-in-out;
 }
+ */
