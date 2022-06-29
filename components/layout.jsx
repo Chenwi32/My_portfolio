@@ -14,15 +14,15 @@ function Layout({ children }) {
       enableSystem={false}
     >
       
-       <div className="layout_container">
+       <div className="layout_container flex_col">
 
      <Navigation />
        
-      <div className="secondary_container  layout__content flex">
-        <main className=" main__content_container  mx-auto">
+      <div className="secondary_container   flex">{/* layout__content  */}
+        <main className=" main__content_container mx-auto">
           {children}
         </main>
-        <div className="sidebar__container">
+        <div className="sidebar__container flex">
           <aside className="asside justify-center flex">
           <h5>Advertisements</h5>
           </aside>
