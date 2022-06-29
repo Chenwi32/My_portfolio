@@ -193,4 +193,10 @@ body {
   }
 }
 
+@media (max-width: 450px) {
+    .layout_container {
+    width: fit-content;
+  }
+}
+
 /* Homepage styles */
