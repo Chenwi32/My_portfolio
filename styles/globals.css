@@ -39,7 +39,6 @@ body {
     hsl(135deg 100% 93%) 84%,
     hsl(135deg 100% 92%) 98%
   );
- 
 }
 
 [data-theme='dark'],
@@ -52,8 +51,9 @@ body {
 .secondary_container {
   min-height: 70vh;
   max-width: 1200px;
-  min-width: 500px;
+
   margin: 0 auto;
+
   position: relative;
   padding: 0 1em;
 }
@@ -61,6 +61,7 @@ body {
 .main__content_container {
   padding: 2em 4em 0.3em;
   margin-right: 3em;
+  min-width: 500px;
 }
 
 .asside {
@@ -142,6 +143,7 @@ body {
   height: 100%;
   width: 100%;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .layout__content {
@@ -170,8 +172,9 @@ body {
     padding: 2em 1.5em 0.3em;
     margin-right: 0;
     margin: auto;
+    min-width: 400px;
     width: 100%;
-
+    
     box-shadow: unset;
     border-bottom-left-radius: unset;
     border-top-right-radius: unset;
@@ -179,8 +182,8 @@ body {
   }
 
   .layout_container {
-  width: fit-content;
-}
+    width: 100%;
+  }
 
   .layout_footer_position {
     margin-bottom: auto;

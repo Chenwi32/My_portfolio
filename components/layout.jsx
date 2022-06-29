@@ -1,20 +1,9 @@
 import Navigation from './Navigation'
 import Footer from './Footer'
-/* import { createGlobalStyle } from 'styled-components' */
 import { ThemeProvider } from 'next-themes'
 import ChatBot from './ChatBot'
 
-/* // Your themeing variables
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --fg: #000;
-    --bg: #fff;
-  }
 
-  [data-theme="dark"] {
-    --fg: #fff;
-    --bg: #000;
-  }` */
 function Layout({ children }) {
 
 
@@ -25,9 +14,9 @@ function Layout({ children }) {
       enableSystem={false}
     >
       
-      <Navigation />
+       <div className="layout_container">
 
-      <div className="layout_container flex flex-col">
+     <Navigation />
        
       <div className="secondary_container  layout__content flex">
         <main className=" main__content_container  mx-auto">
