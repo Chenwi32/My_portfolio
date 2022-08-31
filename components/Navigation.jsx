@@ -52,12 +52,6 @@ const Navigation = () => {
             </li>
 
             <li className={styles.list_item}>
-              <Link href={'/resume'}>
-                <a className={styles.link_container}>Resume</a>
-              </Link>
-            </li>
-
-            <li className={styles.list_item}>
               <Link href={'/blog'}>
                 <a className={styles.link_container}>Blog</a>
               </Link>

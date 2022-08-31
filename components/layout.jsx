@@ -31,12 +31,12 @@ function Layout({ children }) {
         
       </div>
 
-        <div className="layout_footer_position">
-          <Footer />
-        </div>
+        
       
       </div>
-      
+      <div className="layout_footer_position">
+          <Footer />
+        </div>
     </ThemeProvider>
   )
 }
