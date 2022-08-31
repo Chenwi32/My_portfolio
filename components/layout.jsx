@@ -13,8 +13,8 @@ function Layout({ children }) {
       attribute="class"
       enableSystem={false}
     >
-      
-       <div className="layout_container flex_col">
+      <div className='layout_division'>
+              <div className="layout_container ">
 
      <Navigation />
        
@@ -31,8 +31,11 @@ function Layout({ children }) {
       </div>
 
         
-       <Footer />
+       
+        </div>
+        <Footer />
       </div>
+
 
          
      

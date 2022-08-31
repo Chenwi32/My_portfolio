@@ -144,6 +144,10 @@ hr{
 
 /* Layout Styles */
 
+.layout_division{
+  width: fit-content;
+}
+
 .layout_container {
   min-height: 88.7vh;
   height: 100%;
