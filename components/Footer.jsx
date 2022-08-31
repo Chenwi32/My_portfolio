@@ -10,9 +10,9 @@ const Footer = () => {
 
       
 
-      <div className=" container flex flex-wrap items-center justify-center px-4 pt-2 font-medium text-white dark:text-white  lg:pt-0">
+      <div className=" container flex flex-wrap items-start justify-start px-4 pt-2 font-medium text-white dark:text-white  lg:pt-0">
         <h1 id='contact'>Contact</h1>
-        <div className="social flex flex-wrap items-center justify-center space-x-2 sm:space-x-4">
+        <div className="social flex flex-wrap items-start justify-start space-x-2 sm:space-x-4">
           <span
             href="#"
             className={cx(
