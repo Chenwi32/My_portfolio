@@ -58,7 +58,7 @@ const Navigation = () => {
             </li>
 
             <li>
-              <Link href={'/contact'}>
+              <Link href={'#contact'}>
                 <a className="btn">Contact</a>
               </Link>
             </li>

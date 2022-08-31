@@ -7,7 +7,11 @@ const Footer = () => {
       className={
         styles.footer}
     >
+
+      
+
       <div className=" container flex flex-wrap items-center justify-center px-4 pt-2 font-medium text-white dark:text-white  lg:pt-0">
+        <h1 id='contact'>Contact</h1>
         <div className="social flex flex-wrap items-center justify-center space-x-2 sm:space-x-4">
           <span
             href="#"
