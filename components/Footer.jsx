@@ -1,6 +1,8 @@
 import cx from 'classnames'
 import styles from './styles/Footer.module.css'
-/* max-w-4xl px-4 */
+
+import FooterForm from './FooterForm'
+
 const Footer = () => {
   return (
     <div
@@ -62,37 +64,10 @@ const Footer = () => {
 
         <hr />
 
-        <div className={`${styles.form_container}`}>
-          
-          <form action="" className={styles.form}>
-
-            <h3>Leave me a message</h3>
-
-            <div className={styles.form_fields}>
-              <label htmlFor="name">Name: </label>
-              <input className={styles.inputfield} type="text" name="name" />
-            </div>
-
-            <div className={styles.form_fields}>
-              <label htmlFor="email">Email: </label>
-              <input className={styles.inputfield} type="email" name="name" />
-            </div>
-
-            <div className={styles.form_fields}>
-              <label htmlFor="name">Message: </label>
-              <textarea
-                className={styles.inputfield}
-                name=""
-                id=""
-                cols="25"
-                rows="5"
-              ></textarea>
-            </div>
-          </form>
-        </div>
+        <FooterForm />
+      
       </div>
     </div>
   )
 }
-
 export default Footer
