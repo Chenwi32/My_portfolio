@@ -4,10 +4,8 @@ import styles from './styles/Footer.module.css'
 const Footer = () => {
   return (
     <div
-      className={cx(
-        styles.footer,
-        'lg:mt-18 mx-auto mt-12 py-6 sm:py-12 sm:pb-36 '
-      )}
+      className={
+        styles.footer}
     >
       <div className=" container flex flex-wrap items-center justify-center px-4 pt-2 font-medium text-white dark:text-white  lg:pt-0">
         <div className="social flex flex-wrap items-center justify-center space-x-2 sm:space-x-4">
@@ -63,7 +61,7 @@ const Footer = () => {
         <div className={`${styles.form_container}`}>
           
           <form action="" className={styles.form}>
-            
+
             <h3>Leave me a message</h3>
 
             <div className={styles.form_fields}>

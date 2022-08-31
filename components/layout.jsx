@@ -26,17 +26,16 @@ function Layout({ children }) {
           <aside className="asside justify-center flex">
           <h5>Advertisements</h5>
           </aside>
-          <ChatBot/>
         </div>
         
       </div>
 
         
-      
+       <Footer />
       </div>
-      <div className="layout_footer_position">
-          <Footer />
-        </div>
+
+         
+     
     </ThemeProvider>
   )
 }
