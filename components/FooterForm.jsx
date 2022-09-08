@@ -1,16 +1,19 @@
 import { useState } from 'react'
 import styles from './styles/Footer.module.css'
 
+import { toast, ToastContainer } from 'react-nextjs-toast'
+
+
 const FooterForm = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log('Sending')
+  const [buttonValue, setButtonValue] = useState('Send')
 
+  const handleSubmit = async (e) => {
+    
     let data = {
       name,
       email,
@@ -23,19 +26,25 @@ const FooterForm = () => {
         Accept: 'application.json, text/plain, */*',
         'content-Type': '/application/json',
       },
-      body: JSON.stringify(data) 
+      body: JSON.stringify(data),
     }).then((res) => {
       if (res.status === 200) {
         setSubmitted(true)
         setEmail('')
         setName('')
         setMessage('')
+        setButtonValue('Send')
+
+        
       }
     })
+    
   }
 
   return (
     <div className={`${styles.form_container}`}>
+      <ToastContainer align={'right'} position={'bottom'} />
+
       <form action="" className={styles.form}>
         <h3>Leave me a message</h3>
 
@@ -81,9 +90,15 @@ const FooterForm = () => {
           className={`${styles.submit_btn} btn`}
           type="submit"
           button
-          value="Send"
+          value={buttonValue}
           onClick={(e) => {
             handleSubmit(e)
+
+            setButtonValue('Sending...')
+
+            toast.notify('Sent successfully. Thank you very much. I will get to you within 24 hours', {
+              duration: 10,
+            type: 'success'})
           }}
         />
       </form>

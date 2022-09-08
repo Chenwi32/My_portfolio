@@ -1,5 +1,4 @@
 import NodeMailer from 'nodemailer'
-import { useState } from 'react'
 
 
 require('dotenv').config()
