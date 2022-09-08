@@ -35,7 +35,13 @@ const FooterForm = () => {
         setMessage('')
         setButtonValue('Send')
 
-        
+        toast.notify(
+          'Sent successfully. Thank you very much. I will get to you within 24 hours',
+          {
+            duration: 5,
+            type: 'success',
+          }
+        )
       }
     })
     
@@ -96,9 +102,7 @@ const FooterForm = () => {
 
             setButtonValue('Sending...')
 
-            toast.notify('Sent successfully. Thank you very much. I will get to you within 24 hours', {
-              duration: 10,
-            type: 'success'})
+            
           }}
         />
       </form>
