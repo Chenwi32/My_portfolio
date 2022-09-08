@@ -13,7 +13,7 @@ const FooterForm = () => {
   const [buttonValue, setButtonValue] = useState('Send')
 
   const handleSubmit = async (e) => {
-    
+    e.preventDefault()
     let data = {
       name,
       email,
