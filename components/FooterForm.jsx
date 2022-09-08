@@ -7,7 +7,7 @@ const FooterForm = () => {
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('Sending')
 
@@ -17,13 +17,13 @@ const FooterForm = () => {
       message,
     }
 
-    fetch('/api/contact', {
+    await fetch('/api/contact', {
       method: 'POST',
       headers: {
         Accept: 'application.json, text/plain, */*',
         'content-Type': '/application/json',
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data) 
     }).then((res) => {
       if (res.status === 200) {
         setSubmitted(true)
