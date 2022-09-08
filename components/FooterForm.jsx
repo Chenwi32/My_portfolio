@@ -23,7 +23,7 @@ const FooterForm = () => {
         Accept: 'application.json, text/plain, */*',
         'content-Type': '/application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     }).then((res) => {
       if (res.status === 200) {
         setSubmitted(true)

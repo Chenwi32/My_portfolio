@@ -43,7 +43,8 @@
   color: rgb(54, 53, 53);
   outline: none;
   border-radius: 5px;
-  width: 250px;
+  min-width: 250px;
+  width: 100%;
 }
 
 
