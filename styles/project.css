@@ -14,7 +14,7 @@
   position: relative;
   height: fit-content;
   border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.493);
+  box-shadow: 0 0 12px #05bd33;
   border: 2px solid #fff;
 }
 

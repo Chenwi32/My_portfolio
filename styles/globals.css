@@ -51,7 +51,10 @@ body {
 hr{
   border: 5px rgb(47, 214, 5);
 }
-
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
 .secondary_container {
   min-height: 70vh;
   max-width: 1200px;

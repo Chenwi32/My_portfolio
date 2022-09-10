@@ -5,9 +5,9 @@ import { toast, ToastContainer } from 'react-nextjs-toast'
 
 
 const FooterForm = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [nameI, setName] = useState('')
+  const [emailI, setEmail] = useState('')
+  const [messageI, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   const [buttonValue, setButtonValue] = useState('Send')
@@ -15,9 +15,9 @@ const FooterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     let data = {
-      name,
-      email,
-      message,
+      nameI,
+      emailI,
+      messageI,
     }
 
     await fetch('/api/contact', {
@@ -61,29 +61,34 @@ const FooterForm = () => {
             onChange={(e) => {
               setName(e.target.value)
             }}
+            value = {nameI}
             type="text"
             name="name"
+            id='name'
           />
         </div>
 
         <div className={styles.form_fields}>
           <label htmlFor="email">Email: </label>
           <input
+            value={emailI}
             onChange={(e) => {
               setEmail(e.target.value)
             }}
             className={styles.inputfield}
             type="email"
-            name="name"
+            name="email"
+            id='email'
           />
         </div>
 
         <div className={styles.form_fields}>
           <label htmlFor="name">Message: </label>
           <textarea
+            value={messageI}
             className={styles.inputfield}
             name=""
-            id=""
+            id="message"
             cols="25"
             rows="5"
             onChange={(e) => {
@@ -101,7 +106,6 @@ const FooterForm = () => {
             handleSubmit(e)
 
             setButtonValue('Sending...')
-
             
           }}
         />

@@ -54,14 +54,31 @@ const about = () => {
 
       <h2 className="secondary_title">Development Tools</h2>
       
-         <ul className={styles.list}>
-        <li>VS Code</li>
-        <li>Chrome Browser</li>
-        <li>Git/GitHub</li>
-        <li>Firebase &#x1F525;</li>
-        <li>Netlify</li>
-        <li>Heruku</li>
-      </ul>
+        <ul className={styles.list}>
+          <li>VS Code</li>
+          <li>Chrome Browser</li>
+          <li>Git/GitHub</li>
+          <li>Firebase &#x1F525;</li>
+          <li>Netlify</li>
+          <li>Heruku</li>
+        </ul>
+      
+      <h2 className="secondary_title">Languages</h2>
+      
+        <ul className={styles.list}>
+          <li>Javascript</li>
+          <li>Html</li>
+          <li>Css</li>
+          <li>Python</li>
+          <li>SQL (Postgres)</li>
+        </ul>
+      
+        <h2 className="secondary_title">Frameworks</h2>
+      
+        <ul className={styles.list}>
+          <li>React/Next Js</li>
+          <li>Flask</li>
+        </ul>
       </p>
      
     </div>

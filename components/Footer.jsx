@@ -5,16 +5,11 @@ import FooterForm from './FooterForm'
 
 const Footer = () => {
   return (
-    <div
-      className={
-        styles.footer}
-    >
-
-      
-
-      <div className=" container flex flex-wrap items-start justify-start px-4 pt-2 font-medium text-white dark:text-white  lg:pt-0">
-        <h1 id='contact'>Contact</h1>
-        <div className="social flex flex-wrap items-start justify-start space-x-2 sm:space-x-4">
+    <div className={`${styles.footer} flex-col`}>
+      <div className="container">
+        <h1 id="contact">Contact</h1>
+      <div className={`${styles.contact_container}  flex items-start px-4 pt-2 font-medium text-white dark:text-white  lg:pt-0`}>
+        <div className={`${styles.social} flex-col items-start justify-start`}>
           <span
             href="#"
             className={cx(
@@ -62,11 +57,13 @@ const Footer = () => {
           </a>
         </div>
 
-        <hr />
-
-        <FooterForm />
-      
+          <div>
+           <FooterForm /> 
+          </div>
+        
       </div>
+      </div>
+      
     </div>
   )
 }

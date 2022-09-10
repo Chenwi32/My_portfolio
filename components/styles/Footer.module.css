@@ -5,11 +5,30 @@
   display: flex;
   padding: 1em;
   width: 100%;
+  color: #fff;
+}
+
+.footer h1{
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: rgb(47, 214, 5);
+}
+
+.contact_container{
+  width: 100%;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.social{
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__link {
   font-weight: 600;
-  color: #fff;
+  
 }
 
 .footer__link:hover {
@@ -55,4 +74,11 @@
 .submit_btn{
   margin: 1em 1.2em 0;
   font-size: 1rem;
+}
+
+@media (max-width: 700px) { 
+.contact_container{
+  flex-direction: column;
+  margin: auto;
+}
 }
