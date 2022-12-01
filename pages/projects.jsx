@@ -12,10 +12,13 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 
 function projects() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+let link = 'https://mafriculture.web.app/'
 
   return (
     <div className="container mx-auto ">
@@ -133,7 +136,7 @@ function projects() {
               <ModalHeader>Modal Title</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
-                
+                <Link href={link}>MAfriculture</Link>
               </ModalBody>
 
               <ModalFooter>
