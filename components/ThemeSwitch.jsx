@@ -6,10 +6,8 @@ import styles from './styles/Navigation.module.css'
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme, resolvedTheme } = useTheme()
+  const { theme, resolvedTheme } = useTheme()
 
-
-  console.log({ theme })
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
 
@@ -18,10 +16,8 @@ const ThemeSwitch = () => {
       aria-label="Toggle Dark Mode"
       type="button"
       className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
-      onClick={() =>
-        setTheme(
-          theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark'
-        )
+      onClick={() =>{}
+        
       }
     >
           <svg

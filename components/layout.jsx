@@ -8,11 +8,7 @@ function Layout({ children }) {
 
 
   return (
-    <ThemeProvider
-      themes={['light', 'dark']}
-      attribute="class"
-      enableSystem={false}
-    >
+    
       <div className='layout_division'>
               <div className="layout_container ">
 
@@ -37,9 +33,6 @@ function Layout({ children }) {
       </div>
 
 
-         
-     
-    </ThemeProvider>
   )
 }
 

@@ -6,9 +6,6 @@
   color: #05bd33;
 }
 
-.projects a:hover {
-  text-decoration: underline;
-}
 
 .projects__item {
   position: relative;
