@@ -98,7 +98,22 @@ function projects() {
                   <ModalContent>
                     <ModalHeader>{projectData[projId].title}</ModalHeader>
                     <ModalCloseButton />
-                    <ModalBody>{projectData[projId].details}</ModalBody>
+                    <ModalBody>
+                      <Text mb={5}>{projectData[projId].details}</Text>
+                      <Box
+                        boxShadow={'lg'}
+                        p={'1rem'}
+                        border={'1px solid #05bd33'}
+                      >
+                        <Text>
+                          Status:
+                        </Text>
+                        <Text fontWeight={800} color={'brand.100'}>
+                          {projectData[projId].status}
+                        </Text>
+                        
+                      </Box>
+                    </ModalBody>
 
                     <ModalFooter>
                       <Button colorScheme="blue" mr={3} onClick={onClose}>
