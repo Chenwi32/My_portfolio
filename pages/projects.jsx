@@ -9,14 +9,20 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  SimpleGrid,
   Text,
   useDisclosure,
+  useMediaQuery,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
 function projects() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const [isLargerThan700] = useMediaQuery('(min-width: 700px)')
+
+  const [isLargerThan1000] = useMediaQuery('(min-width: 1000px)')
 
   const projectData = [
     {
@@ -53,14 +59,20 @@ function projects() {
       <div className=" projects  ">
         <h1 className="title">My personal projects</h1>
 
-        <div className="grid grid-cols-2 gap-5">
+        <SimpleGrid
+          columns={
+       isLargerThan700 ? 2 : 1
+          }
+          spacing={isLargerThan700 ? '24px' : '2rem'}
+          margin={'auto'}
+        >
           {projectData.map((project) => {
             return (
               <Box
                 boxShadow={'lg'}
                 border={'1px solid #05bd33'}
                 borderRadius={'lg'}
-                p={'1.5rem 2rem'}
+                p={ isLargerThan1000? '1.5rem 2rem': 5}
                 key={project.id}
               >
                 <Heading fontSize={'1.3rem'} mb={5}>
@@ -105,13 +117,10 @@ function projects() {
                         p={'1rem'}
                         border={'1px solid #05bd33'}
                       >
-                        <Text>
-                          Status:
-                        </Text>
+                        <Text>Status:</Text>
                         <Text fontWeight={800} color={'brand.100'}>
                           {projectData[projId].status}
                         </Text>
-                        
                       </Box>
                     </ModalBody>
 
@@ -142,7 +151,7 @@ function projects() {
               </Box>
             )
           })}
-        </div>
+        </SimpleGrid>
       </div>
     </div>
   )
