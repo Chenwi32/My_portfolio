@@ -119,8 +119,8 @@ const FooterForm = () => {
           type="submit"
           button
           value={buttonValue}
-          onClick={() => {
-            handleSubmit()
+          onClick={(e) => {
+            handleSubmit(e)
 
             setButtonValue('Sending...')
           }}
