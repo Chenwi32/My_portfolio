@@ -14,7 +14,8 @@ const FooterForm = () => {
 
   const [buttonValue, setButtonValue] = useState('Send')
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     const timestamp = Date.now().toString()
 
     const myMessages = doc(db, `mymessages/${timestamp}`)
