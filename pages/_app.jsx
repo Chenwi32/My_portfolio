@@ -4,6 +4,10 @@ import '../styles/project.css'
 import Layout from '../components/layout'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
+import '@fortawesome/fontawesome-svg-core/styles.css'; //importing font awesome css
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+
 const theme = extendTheme({
   colors: {
     brand: {

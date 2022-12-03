@@ -5,6 +5,7 @@ import { db } from '../firebase'
 import { toast, ToastContainer } from 'react-nextjs-toast'
 
 import { addDoc, doc, getFirestore, setDoc } from 'firebase/firestore'
+import { Heading } from '@chakra-ui/react'
 
 const FooterForm = () => {
   const [nameI, setName] = useState('')
@@ -49,14 +50,14 @@ const FooterForm = () => {
     setEmail("");
     } else {
       
-          
+          setButtonValue('Send')
           toast.notify(
             'Some field are still empty. Please make sure you fill in all the information required. Thank you.',
             {
               duration: 5,
             }
           )
-          setButtonValue('Send')
+          
     }
   }
 
@@ -69,7 +70,11 @@ const FooterForm = () => {
       />
 
       <form action="" className={styles.form}>
-        <h3>Leave me a message</h3>
+
+        <Heading mb={2} mt={5} fontSize={'1.5rem'} color={'brand.100'}>
+          Leave me a message
+        </Heading>
+        
 
         <div className={styles.form_fields}>
           <label htmlFor="name">Name: </label>

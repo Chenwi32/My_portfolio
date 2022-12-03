@@ -41,7 +41,7 @@ const Dashboard = () => {
       <Container maxW={1200}>
         <Heading mb={10}>New messages</Heading>
         {myMessages.map((message) => (
-          <Box key={message.nameI} border={'1px'} p={8} boxShadow={'lg'} borderRadius={'lg'}  fontWeight={600}>
+          <Box key={message.nameI} border={'1px'} p={8} boxShadow={'lg'} borderRadius={'lg'}  fontWeight={600} mb={5}>
             <Text>Message from:</Text>
             <Text mb={5}>{message.nameI}</Text>
 
