@@ -1,40 +1,36 @@
 import { useState } from 'react'
 import styles from './styles/Footer.module.css'
+import { db } from '../firebase'
 
 import { toast, ToastContainer } from 'react-nextjs-toast'
 
+import { addDoc, doc, getFirestore, setDoc } from 'firebase/firestore'
 
 const FooterForm = () => {
   const [nameI, setName] = useState('')
   const [emailI, setEmail] = useState('')
   const [messageI, setMessage] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  
 
   const [buttonValue, setButtonValue] = useState('Send')
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    let data = {
+  const handleSubmit = async () => {
+    const timestamp = Date.now().toString()
+
+    const myMessages = doc(db, `mymessages/${timestamp}`)
+
+    const data = {
       nameI,
       emailI,
       messageI,
     }
 
-    await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        Accept: 'application.json, text/plain, */*',
-        'content-Type': '/application/json',
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) {
-        setSubmitted(true)
-        setEmail('')
-        setName('')
-        setMessage('')
-        setButtonValue('Send')
-
+        if ( emailI !== "" && nameI !== "" && messageI !== "") {
+      setButtonValue("Sending...");
+      try {
+        await setDoc(myMessages, data).then(() => {
+          setButtonValue("Send");
+        });
         toast.notify(
           'Sent successfully. Thank you very much. I will get to you within 24 hours',
           {
@@ -42,14 +38,34 @@ const FooterForm = () => {
             type: 'success',
           }
         )
+      } catch (error) {
+        console.log(error);
       }
-    })
-    
+
+
+    setMessage("");
+    setName("");
+    setEmail("");
+    } else {
+      
+          
+          toast.notify(
+            'Some field are still empty. Please make sure you fill in all the information required. Thank you.',
+            {
+              duration: 5,
+            }
+          )
+          setButtonValue('Send')
+    }
   }
 
   return (
     <div className={`${styles.form_container}`}>
-      <ToastContainer align={'right'} position={'bottom'} />
+      <ToastContainer
+        align={'right'}
+        position={'bottom'}
+        primaryColor="#FFCB2B"
+      />
 
       <form action="" className={styles.form}>
         <h3>Leave me a message</h3>
@@ -61,10 +77,10 @@ const FooterForm = () => {
             onChange={(e) => {
               setName(e.target.value)
             }}
-            value = {nameI}
+            value={nameI}
             type="text"
             name="name"
-            id='name'
+            id="name"
           />
         </div>
 
@@ -78,7 +94,7 @@ const FooterForm = () => {
             className={styles.inputfield}
             type="email"
             name="email"
-            id='email'
+            id="email"
           />
         </div>
 
@@ -102,11 +118,10 @@ const FooterForm = () => {
           type="submit"
           button
           value={buttonValue}
-          onClick={(e) => {
-            handleSubmit(e)
+          onClick={() => {
+            handleSubmit()
 
             setButtonValue('Sending...')
-            
           }}
         />
       </form>
