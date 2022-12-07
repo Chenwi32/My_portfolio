@@ -8,57 +8,49 @@
   color: #fff;
 }
 
-.footer h1{
+.footer h1 {
   font-size: 1.5rem;
   font-family: sans-serif;
   font-weight: 800;
   color: rgb(47, 214, 5);
 }
 
-.contact_container{
+.contact_container {
   width: 100%;
   justify-content: space-between;
   margin: 1em;
 }
 
-.social{
+.social {
   display: flex;
   flex-direction: column;
 }
 
 .footer__link {
   font-weight: 600;
-  
 }
 
 .footer__link:hover {
   text-decoration: underline;
 }
 
-.form_container{
+.form_container {
   min-height: 300px;
   width: 100%;
   display: flex;
   align-items: flex-start;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.form_fields{
-  margin: .5em;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.inputfield{
+.inputfield {
   margin: 1em 0 0 0.5em;
-  padding: .5em;
+  padding: 0.5em;
   color: rgb(54, 53, 53);
   outline: none;
   border-radius: 5px;
@@ -66,19 +58,18 @@
   width: 100%;
 }
 
-
-.inputfield:focus{
+.inputfield:focus {
   box-shadow: 0 0 10px rgb(47, 214, 5);
 }
 
-.submit_btn{
+.submit_btn {
   margin: 1em 1.2em 0;
   font-size: 1rem;
 }
 
-@media (max-width: 700px) { 
-.contact_container{
-  flex-direction: column;
-  margin: auto;
-}
+@media (max-width: 700px) {
+  .contact_container {
+    flex-direction: column;
+    margin: auto;
+  }
 }

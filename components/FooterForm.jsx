@@ -5,7 +5,9 @@ import { db } from '../firebase'
 import { toast, ToastContainer } from 'react-nextjs-toast'
 
 import { addDoc, doc, getFirestore, setDoc } from 'firebase/firestore'
-import { Heading } from '@chakra-ui/react'
+import { border, Button, Container, Flex, Heading, HStack, VStack } from '@chakra-ui/react'
+
+
 
 const FooterForm = () => {
   const [nameI, setName] = useState('')
@@ -62,21 +64,19 @@ const FooterForm = () => {
   }
 
   return (
-    <div className={`${styles.form_container}`}>
+    <Container maxW={1200} p={0}>
       <ToastContainer
         align={'right'}
         position={'bottom'}
         primaryColor="#FFCB2B"
       />
 
-      <form action="" className={styles.form}>
-
-        <Heading mb={2} mt={5} fontSize={'1.5rem'} color={'brand.100'}>
+      <Flex direction={'column'}>
+        <Heading mb={2} fontSize={'1.5rem'} color={'brand.100'}>
           Leave me a message
         </Heading>
-        
 
-        <div className={styles.form_fields}>
+        <VStack mb={5} align={'left'}>
           <label htmlFor="name">Name: </label>
           <input
             className={styles.inputfield}
@@ -88,9 +88,9 @@ const FooterForm = () => {
             name="name"
             id="name"
           />
-        </div>
+        </VStack>
 
-        <div className={styles.form_fields}>
+        <VStack mb={5} align={'left'}>
           <label htmlFor="email">Email: </label>
           <input
             value={emailI}
@@ -102,9 +102,9 @@ const FooterForm = () => {
             name="email"
             id="email"
           />
-        </div>
+        </VStack>
 
-        <div className={styles.form_fields}>
+        <VStack mb={5} align={'left'}>
           <label htmlFor="name">Message: </label>
           <textarea
             value={messageI}
@@ -117,21 +117,28 @@ const FooterForm = () => {
               setMessage(e.target.value)
             }}
           ></textarea>
-        </div>
+        </VStack>
 
-        <input
-          className={`${styles.submit_btn} btn`}
-          type="submit"
-          button
-          value={buttonValue}
+        <Button
+          bg={'brand.100'}
+          _hover={{
+            bg: 'brand.200',
+            border: '1px solid #fff',
+          }}
+
+          mt={5}
+  
+          boxShadow={'2xl'}
           onClick={(e) => {
             handleSubmit(e)
 
             setButtonValue('Sending...')
           }}
-        />
-      </form>
-    </div>
+        >
+          {buttonValue}
+        </Button>
+      </Flex>
+    </Container>
   )
 }
 

@@ -1,3 +1,4 @@
+import { Container } from '@chakra-ui/react'
 import Head from 'next/head'
 import HomePage from '../components/homePage'
 
@@ -8,9 +9,9 @@ const Home = () => {
         <title>Eugene's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="mx-auto max-w-4xl antialiased" >
+      <Container maxW={'unset'} w={'100%'}  >
         <HomePage />
-      </main>
+      </Container>
     </>
   )
 }

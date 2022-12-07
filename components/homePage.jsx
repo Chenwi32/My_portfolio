@@ -3,10 +3,11 @@ import Image from 'next/image'
 import styles from '../styles/About.module.css'
 import cx from 'classnames'
 import EmblaCarousel from '../components/emblacarousel'
+import { Container } from '@chakra-ui/react'
 
 const HomePage = () => {
   return (
-    <div className=" mx-auto px-4">
+    <Container  maxW={'unset'} minW={'fit-content'} w={'100%'} mb={10}>
       <div className="home__page item-center flex-col text-center lg:-mx-4  lg:space-x-5">
         <div className={cx(styles.about_image_container, 'flex-shrink-0  ')}>
           <div
@@ -25,7 +26,7 @@ const HomePage = () => {
           <EmblaCarousel />
         </div>
       </div>
-    </div>
+    </Container>
   )
 } 
 

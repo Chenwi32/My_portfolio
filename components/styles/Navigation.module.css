@@ -15,20 +15,6 @@
   width: 100%;
 }
 
-.list_item {
-  list-style-type: none;
-  margin-right: 0.5em;
-}
-
-.link_container {
-  padding: 0.9em;
-  border-radius: 5px;
-}
-
-.link_container:hover {
-  background-color: #05bd331e;
-}
-
 .path {
   color: black;
 }
@@ -72,15 +58,3 @@
 }
 
 
-@media (max-width: 770px) {
-
-  .list_item {
-  margin-right: 0.2em;
-  font-size: .7rem ;
-}
-
-.link_container {
-  padding: 0.7em 0.5em;
-  border-radius: 5px;
-}
-}

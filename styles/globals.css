@@ -8,6 +8,11 @@
 
 html,
 body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-right: 0;
+
   /* Hide Scroolbar */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -39,56 +44,26 @@ body {
     hsl(135deg 100% 93%) 84%,
     hsl(135deg 100% 92%) 98%
   );
-}
-
-[data-theme='dark'],
-[data-theme='dark'] html,
-[data-theme='dark'] body {
-  color: #fff;
-  background: #000;
+  
 }
 
 hr{
   border: 5px rgb(47, 214, 5);
 }
-.container{
-  max-width: 1200px;
+
+.chakra-ui-light,
+#__next{
+  width: 100vw !important;
+  min-width: fit-content ;
+  padding: 0;
+  padding-right: 0;
   margin: auto;
-}
-.secondary_container {
-  min-height: 70vh;
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  padding: 1em;
+  margin-right: 0;
+  background-color: inherit;
 }
 
-.main__content_container {
-  padding: 2em 3em;
-  min-width: 500px;
-  width: 100%;
-  margin: 0;
-  width: 60%;
-}
-
-.asside {
-  height: fit-content;
-  min-width: 300px;
-  padding: 2em;
-  position: sticky;
-  top: 5.5em;
-  min-height: 40vh;
-  margin: auto;
-}
-
-.main__content_container,
-.asside {
-  background-color: rgba(255, 255, 255, 0.726);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 15px;
+#contact{
+  margin-left: .5rem;
 }
 
 .btn {
@@ -145,59 +120,15 @@ hr{
   font-weight: 800;
 }
 
-/* Layout Styles */
-
-.layout_division{
-  width: fit-content;
-}
-
-.layout_container {
-  min-height: 88.7vh;
-  height: 100%;
-  width: 100%;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.layout__content {
-  justify-content: center;
-}
 
 @media (max-width: 900px) {
-  .secondary_container {
-    margin: 0;
-    padding: 0;
-  }
-
-  .sidebar__container {
-    display: none;
-  }
+  
 
   .btn {
     padding: 0.7em;
     font-size: 0.7rem;
   }
 
-  .main__content_container {
-    padding: 2em 1.5em 0.3em;
-    margin: auto;
-    min-width: 300px;
-    width: 100%;
-
-    box-shadow: unset;
-    border-bottom-left-radius: unset;
-    border-top-right-radius: unset;
-    margin-top: 1em;
-  }
-
-  .layout_container {
-    width: 100%;
-    padding: 1em 1em 0;
-  }
-
-  .layout_footer_position {
-    margin-bottom: auto;
-  }
 }
 
 @media (max-width: 450px) {
@@ -206,10 +137,3 @@ hr{
   }
 }
 
-@media (min-width: 900px) {
-   .layout_division{
-  width: 100%;
-}
-}
-
-/* Homepage styles */

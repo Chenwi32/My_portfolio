@@ -1,11 +1,11 @@
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.css'
-import '../styles/project.css'
 import Layout from '../components/layout'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'; //importing font awesome css
 import { config } from '@fortawesome/fontawesome-svg-core';
+import Navigation from '../components/Navigation'
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
 const theme = extendTheme({
@@ -20,12 +20,15 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }) {
   return (
-
-    <ChakraProvider theme={theme} >
-       <Layout>
+ 
+     <ChakraProvider  theme={theme} >
+   <Layout>  
+      
       {<Component {...pageProps} />}
-    </ Layout>
-    </ChakraProvider>
+      
+       
+    </Layout>
+     </ChakraProvider>
    
   )
 }

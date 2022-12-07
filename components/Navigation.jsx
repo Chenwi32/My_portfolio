@@ -4,24 +4,33 @@ import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
 import styles from './styles/Navigation.module.css'
 import cx from 'classnames'
+import { Button, Container, Flex, useMediaQuery } from '@chakra-ui/react'
 
 /* lg:max-w-4xl px-4*/
 
 const Navigation = () => {
+  const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)')
+  const [isLargerThan700] = useMediaQuery('(min-width: 700px)')
+
   return (
-    <div
-      className={cx(styles.nav, 'nav sticky top-0 z-20 py-2  md:mb-0 md:py-1')}
+    <Container
+      maxW={1200}
+      width={isLargerThan1200 ? '100%' : '95%'}
+      className={styles.nav}
+      p={isLargerThan700 ? 3 : 1}
+      mt={2}
+      mb={10}
+      borderRadius={'lg'}
+      position={'sticky'}
+      top={0}
+      zIndex={1}
     >
-      <div className="nav__container container mx-auto flex items-center justify-between  ">
+      <Flex alignItems={'center'} justifyContent={'space-between'}>
         <Link href="/">
-          <a
-            className={
-              'font-medium uppercase tracking-wider text-gray-900 transition-colors hover:text-sky-500 dark:text-white'
-            }
-          >
+          <a>
             <Image
               src="/images/logo.png"
-              alt="Profile"
+              alt="eugenen's logo"
               priority={true}
               className={styles.logo}
               id="profile"
@@ -31,38 +40,42 @@ const Navigation = () => {
           </a>
         </Link>
 
-        <div className="nav_right flex items-center justify-between dark:text-white">
-          <ul className="flex items-center">
-            <li className={styles.list_item}>
-              <Link href={'/'}>
-                <a className={styles.link_container}>Home</a>
-              </Link>
-            </li>
+        <Flex alignItems={'center'}>
+          <Flex
+            gap={isLargerThan700 ? 5 : 2}
+            alignItems={'center'}
+            fontSize={isLargerThan700 ? 'inherit' : '1em'}
+          >
+            <Link href={'/'}>
+              <a>Home</a>
+            </Link>
 
-            <li className={styles.list_item}>
-              <Link href={'/about'}>
-                <a className={styles.link_container}>About</a>
-              </Link>
-            </li>
+            <Link href={'/aboutme'}>
+              <a>About</a>
+            </Link>
 
-            <li className={styles.list_item}>
-              <Link href={'/projects'}>
-                <a className={styles.link_container}>Projects</a>
-              </Link>
-            </li>
+            <Link href={'/projects'}>
+              <a>Projects</a>
+            </Link>
 
-            <li className={styles.list_item}>
-              <Link href={'/blog'}>
-                <a className={styles.link_container}>Blog</a>
-              </Link>
-            </li>
+            <Link href={'/blog'}>
+              <a>Blog</a>
+            </Link>
 
-            <li>
-              <Link href={'#contact'}>
-                <a className="btn">Contact</a>
-              </Link>
-            </li>
-          </ul>
+            <Link href="#contact">
+              <Button
+                bg={'brand.100'}
+                color={'brand.300'}
+                _hover={{
+                  bg: 'brand.200',
+                  color: 'brand.100',
+                }}
+                p={isLargerThan700 ? 3 : 2}
+              >
+                Contact
+              </Button>
+            </Link>
+          </Flex>
 
           <div className={cx(styles.hover__message, styles.tooltip)}>
             <ThemeSwitch />
@@ -70,9 +83,9 @@ const Navigation = () => {
               Dark mode hasn't been fully implemented, I'm still working on it!!
             </span>
           </div>
-        </div>
-      </div>
-    </div>
+        </Flex>
+      </Flex>
+    </Container>
   )
 }
 

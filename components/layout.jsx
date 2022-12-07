@@ -1,38 +1,19 @@
 import Navigation from './Navigation'
 import Footer from './Footer'
-import { ThemeProvider } from 'next-themes'
-import ChatBot from './ChatBot'
-
+import { Box, Container, Flex, useMediaQuery } from '@chakra-ui/react'
 
 function Layout({ children }) {
 
-
   return (
-    
-      <div className='layout_division'>
-              <div className="layout_container ">
+    <Container maxW={'unset'} minW={'fit-content'} p={0} m={0}>
+      
+        <Navigation />
 
-     <Navigation />
+        {/* layout__content  */}
+        <Box width={'100%'}>{children}</Box>
        
-      <div className="secondary_container ">{/* layout__content  */}
-        <main className=" main__content_container mx-auto">
-          {children}
-        </main>
-        <div className="sidebar__container">
-          <aside className="asside justify-center flex">
-          <h5>Advertisements</h5>
-          </aside>
-        </div>
-        
-      </div>
-
-        
-       
-        </div>
-        <Footer />
-      </div>
-
-
+      <Footer />
+    </Container>
   )
 }
 

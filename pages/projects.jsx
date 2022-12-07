@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Container,
   Heading,
   Modal,
   ModalBody,
@@ -55,105 +56,107 @@ function projects() {
   ]
   const [projId, setProjId] = useState(0)
   return (
-    <div className="container mx-auto ">
-      <div className=" projects  ">
-        <h1 className="title">My personal projects</h1>
+    <Container
+      minW={isLargerThan700 ? 'unset' : '100vw'}
+      width={'fit-content'}
+      p={5}
+      maxW={1200}
+      mb={10}
+    >
+      <Heading className="title">My personal projects</Heading>
 
-        <SimpleGrid
-          columns={
-       isLargerThan700 ? 2 : 1
-          }
-          spacing={isLargerThan700 ? '24px' : '2rem'}
-          margin={'auto'}
-        >
-          {projectData.map((project) => {
-            return (
+      <SimpleGrid
+        columns={isLargerThan700 ? 2 : 1}
+        spacing={isLargerThan700 ? '24px' : '2rem'}
+        margin={'auto'}
+      >
+        {projectData.map((project) => {
+          return (
+            <Box
+              boxShadow={'lg'}
+              border={'1px solid #05bd33'}
+              borderRadius={'lg'}
+              p={isLargerThan1000 ? '1.5rem 2rem' : 5}
+              key={project.id}
+            >
+              <Heading fontSize={'1.3rem'} mb={5}>
+                {project.title}
+              </Heading>
+
+              <Text mb={5} className="projects__text">
+                {project.headline}
+              </Text>
+
               <Box
-                boxShadow={'lg'}
-                border={'1px solid #05bd33'}
-                borderRadius={'lg'}
-                p={ isLargerThan1000? '1.5rem 2rem': 5}
-                key={project.id}
+                height={0}
+                width={'100%'}
+                borderBottom={'1px solid #05bd33'}
+                mb={5}
+              />
+
+              <Button
+                bg={'brand.100'}
+                color={'brand.300'}
+                _hover={{
+                  bg: 'brand.200',
+                  color: 'brand.100',
+                }}
+                onClick={() => {
+                  setProjId(project.id)
+                  onOpen()
+                }}
               >
-                <Heading fontSize={'1.3rem'} mb={5}>
-                  {project.title}
-                </Heading>
+                See more{' '}
+              </Button>
 
-                <Text mb={5} className="projects__text">
-                  {project.headline}
-                </Text>
+              <Modal isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                  <ModalHeader>{projectData[projId].title}</ModalHeader>
+                  <ModalCloseButton />
+                  <ModalBody>
+                    <Text mb={5}>{projectData[projId].details}</Text>
+                    <Box
+                      boxShadow={'lg'}
+                      p={'1rem'}
+                      border={'1px solid #05bd33'}
+                    >
+                      <Text>Status:</Text>
+                      <Text fontWeight={800} color={'brand.100'}>
+                        {projectData[projId].status}
+                      </Text>
+                    </Box>
+                  </ModalBody>
 
-                <Box
-                  height={0}
-                  width={'100%'}
-                  borderBottom={'1px solid #05bd33'}
-                  mb={5}
-                />
+                  <ModalFooter>
+                    <Button colorScheme="blue" mr={3} onClick={onClose}>
+                      Close
+                    </Button>
 
-                <Button
-                  bg={'brand.100'}
-                  color={'brand.300'}
-                  _hover={{
-                    bg: 'brand.200',
-                    color: 'brand.100',
-                  }}
-                  onClick={() => {
-                    setProjId(project.id)
-                    onOpen()
-                  }}
-                >
-                  See more{' '}
-                </Button>
-
-                <Modal isOpen={isOpen} onClose={onClose}>
-                  <ModalOverlay />
-                  <ModalContent>
-                    <ModalHeader>{projectData[projId].title}</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                      <Text mb={5}>{projectData[projId].details}</Text>
-                      <Box
-                        boxShadow={'lg'}
-                        p={'1rem'}
-                        border={'1px solid #05bd33'}
+                    <Button
+                      bg={'brand.100'}
+                      color={'brand.300'}
+                      _hover={{
+                        bg: 'brand.200',
+                        color: 'brand.100',
+                      }}
+                    >
+                      <a
+                        href={projectData[projId].link}
+                        target="_blank"
+                        rel="noreferrer"
                       >
-                        <Text>Status:</Text>
-                        <Text fontWeight={800} color={'brand.100'}>
-                          {projectData[projId].status}
-                        </Text>
-                      </Box>
-                    </ModalBody>
-
-                    <ModalFooter>
-                      <Button colorScheme="blue" mr={3} onClick={onClose}>
-                        Close
-                      </Button>
-
-                      <Button
-                        bg={'brand.100'}
-                        color={'brand.300'}
-                        _hover={{
-                          bg: 'brand.200',
-                          color: 'brand.100',
-                        }}
-                      >
-                        <a
-                          href={projectData[projId].link}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          See project
-                        </a>
-                      </Button>
-                    </ModalFooter>
-                  </ModalContent>
-                </Modal>
-              </Box>
-            )
-          })}
-        </SimpleGrid>
-      </div>
-    </div>
+                        See project
+                      </a>
+                    </Button>
+                  </ModalFooter>
+                </ModalContent>
+              </Modal>
+            </Box>
+          )
+        })}
+      </SimpleGrid>
+    </Container>
   )
 }
 
