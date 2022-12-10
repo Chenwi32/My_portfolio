@@ -33,19 +33,21 @@ const CreatePost = () => {
       postTitle,
       postHeadline,
       postBody,
-      timestanp,
     }
 
-    if (postTitle !== '' && postHeadline !== '' && postBody !== '') {
+    if (postTitle !== '' && postHeadline !== '' && postBody !== '' && postAuthor !== '') {
       try {
         await setDoc(post, postdata)
       } catch (error) {
         console.log(error)
       }
 
+      setPostAuthor('')
       setPostBody('')
       setPostBody('')
       setPostTitle('')
+    } else {
+      alert('You forgot some fields')
     }
   }
 

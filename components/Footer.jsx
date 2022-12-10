@@ -15,7 +15,6 @@ import {
 import { Box, Container, Flex, Heading, Text, useMediaQuery } from '@chakra-ui/react'
 import {
   faEnvelope,
-  faMessage,
   faSquarePhone,
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -82,7 +81,10 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} />
+              
+                <FontAwesomeIcon icon={faGithub} />
+              
+              
             </a>
             <a
               href="https://web.facebook.com/profile.php?id=100009608373380"

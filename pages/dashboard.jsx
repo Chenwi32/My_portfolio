@@ -1,6 +1,7 @@
-import { Box, Container, Heading, Text } from '@chakra-ui/react'
+import { Box, Button, Container, Heading, HStack, Text } from '@chakra-ui/react'
 import { collection, getDocs, query } from 'firebase/firestore'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import { db } from '../firebase'
@@ -39,9 +40,32 @@ const Dashboard = () => {
       </Head>
 
       <Container maxW={1200}>
+        <HStack p={3} w={'100%'} justifyContent={'flex-end'} mb={10}>
+          <Link href="/createPost">
+            <Button
+              bg={'brand.100'}
+              color={'brand.300'}
+              _hover={{
+                bg: 'brand.200',
+                color: 'brand.100',
+              }}
+            >
+              Create Blog Post
+            </Button>
+          </Link>
+        </HStack>
+        
         <Heading mb={10}>New messages</Heading>
         {myMessages.map((message) => (
-          <Box key={message.nameI} border={'1px'} p={8} boxShadow={'lg'} borderRadius={'lg'}  fontWeight={600} mb={5}>
+          <Box
+            key={message.nameI}
+            border={'1px'}
+            p={8}
+            boxShadow={'lg'}
+            borderRadius={'lg'}
+            fontWeight={600}
+            mb={5}
+          >
             <Text>Message from:</Text>
             <Text mb={5}>{message.nameI}</Text>
 
@@ -50,7 +74,9 @@ const Dashboard = () => {
 
             <Text mb={2}>Message:</Text>
 
-            <Text border={'1px solid blue'} p={3}>{message.messageI}</Text>
+            <Text border={'1px solid blue'} p={3}>
+              {message.messageI}
+            </Text>
           </Box>
         ))}
       </Container>

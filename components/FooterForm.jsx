@@ -59,18 +59,13 @@ const FooterForm = () => {
               duration: 5,
             }
           )
+      
           
     }
   }
 
   return (
     <Container maxW={1200} p={0}>
-      <ToastContainer
-        align={'right'}
-        position={'bottom'}
-        primaryColor="#FFCB2B"
-      />
-
       <Flex direction={'column'}>
         <Heading mb={2} fontSize={'1.5rem'} color={'brand.100'}>
           Leave me a message
@@ -125,9 +120,7 @@ const FooterForm = () => {
             bg: 'brand.200',
             border: '1px solid #fff',
           }}
-
           mt={5}
-  
           boxShadow={'2xl'}
           onClick={(e) => {
             handleSubmit(e)
@@ -138,6 +131,12 @@ const FooterForm = () => {
           {buttonValue}
         </Button>
       </Flex>
+      <ToastContainer
+        align={'right'}
+        position={'top'}
+        id="toast-comp-3"
+        primaryColor="#FFCB2B"
+      />
     </Container>
   )
 }
