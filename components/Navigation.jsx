@@ -44,7 +44,7 @@ const Navigation = () => {
           <Flex
             gap={isLargerThan700 ? 5 : 2}
             alignItems={'center'}
-            fontSize={isLargerThan700 ? 'inherit' : '1em'}
+            fontSize={isLargerThan700 ? 'inherit' : '.9rem'}
           >
             <Link href={'/'}>
               <a>Home</a>
