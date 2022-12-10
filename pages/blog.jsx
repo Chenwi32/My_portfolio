@@ -1,4 +1,4 @@
-import { Box, Button, Container, Heading, HStack, Text } from '@chakra-ui/react'
+import { Box, Button, Container, Heading, HStack, Text, VStack } from '@chakra-ui/react'
 import { collection, getDocs, limit, query, startAfter } from 'firebase/firestore'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -51,16 +51,21 @@ const blog = () => {
       </Head>
 
       <Container maxW={1200} minH={'70vh'}>
-        <Heading fontSize={'1.5rem'}>
-          Stop Gambling with your children's lives and your hard earn money
-        </Heading>
-
         {posts.map((post) => (
-          <Box border={'1px'} mb={10} mt={10} p={5}>
-            <Text mb={5}>{post.postTitle}</Text>
+          <VStack maxW={900} align={'left'} m={'auto'} mb={10} mt={10} p={5}>
+            <Heading
+              w={'fit-content'}
+              borderBottom={'5px solid #05bd33'}
+              mb={5}
+            >
+              {post.postTitle}
+            </Heading>
             <Text mb={5}>{post.postHeadline}</Text>
-            <Text mb={5}>{post.postBody}</Text>
-          </Box>
+
+            <Text w={'100%'} lineHeight={'auto'}>
+              {post.postBody}
+            </Text>
+          </VStack>
         ))}
       </Container>
     </>

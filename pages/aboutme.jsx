@@ -20,7 +20,7 @@ const Aboutme = () => {
         minW={isLargerThan700 ? 'unset' : '100vw'}
         width={'fit-content'}
         p={5}
-        maxW={1200}
+        maxW={900}
         mb={10}
       >
         <Heading w={'fit-content'} borderBottom={'5px solid #05bd33'} mb={5}>
