@@ -1,4 +1,4 @@
-import { Box, Button, Container, Heading, HStack, Text } from '@chakra-ui/react'
+import { Box, Button, Container, Heading, HStack, SkeletonCircle, SkeletonText, Text } from '@chakra-ui/react'
 import { collection, getDocs, query } from 'firebase/firestore'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -8,6 +8,8 @@ import { db } from '../firebase'
 
 const Dashboard = () => {
   const messagecollection = collection(db, 'mymessages')
+
+  let loading
 
   const [myMessages, setMyMessages] = useState([])
 
@@ -33,13 +35,15 @@ const Dashboard = () => {
     getMessages()
   }, [])
 
+  loading = myMessages.length === 0
+
   return (
     <>
       <Head>
         <title>Eugene's dashboard</title>
       </Head>
 
-      <Container maxW={1200}>
+      <Container maxW={1200} mb={10}>
         <HStack p={3} w={'100%'} justifyContent={'flex-end'} mb={10}>
           <Link href="/createpost">
             <Button
@@ -54,31 +58,46 @@ const Dashboard = () => {
             </Button>
           </Link>
         </HStack>
-        
+
         <Heading mb={10}>New messages</Heading>
-        {myMessages.map((message) => (
-          <Box
-            key={message.nameI}
-            border={'1px'}
-            p={8}
-            boxShadow={'lg'}
-            borderRadius={'lg'}
-            fontWeight={600}
-            mb={5}
-          >
-            <Text>Message from:</Text>
-            <Text mb={5}>{message.nameI}</Text>
+        {loading ? (
+          <>
+            <Box padding="6" boxShadow="lg" bg="white">
+              <SkeletonCircle size="10" />
+              <SkeletonText
+                mt="4"
+                noOfLines={4}
+                spacing="4"
+                skeletonHeight="2"
+              />
+            </Box>
+            
+          </>
+        ) : (
+          myMessages.map((message) => (
+            <Box
+              key={message.nameI}
+              border={'1px'}
+              p={8}
+              boxShadow={'lg'}
+              borderRadius={'lg'}
+              fontWeight={600}
+              mb={5}
+            >
+              <Text>Message from:</Text>
+              <Text mb={5}>{message.nameI}</Text>
 
-            <Text>Email:</Text>
-            <Text mb={5}>{message.emailI}</Text>
+              <Text>Email:</Text>
+              <Text mb={5}>{message.emailI}</Text>
 
-            <Text mb={2}>Message:</Text>
+              <Text mb={2}>Message:</Text>
 
-            <Text border={'1px solid blue'} p={3}>
-              {message.messageI}
-            </Text>
-          </Box>
-        ))}
+              <Text border={'1px solid blue'} p={3}>
+                {message.messageI}
+              </Text>
+            </Box>
+          ))
+        )}
       </Container>
     </>
   )

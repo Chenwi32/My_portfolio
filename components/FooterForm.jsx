@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import styles from './styles/Footer.module.css'
 import { db } from '../firebase'
-
-import { toast, ToastContainer } from 'react-nextjs-toast'
+import 'react-toastify/dist/ReactToastify.css'
 
 import { addDoc, doc, getFirestore, setDoc } from 'firebase/firestore'
 import { border, Button, Container, Flex, Heading, HStack, VStack } from '@chakra-ui/react'
+import { toast, ToastContainer } from 'react-toastify'
 
 
 
@@ -35,13 +35,9 @@ const FooterForm = () => {
         await setDoc(myMessages, data).then(() => {
           setButtonValue("Send");
         });
-        toast.notify(
-          'Sent successfully. Thank you very much. I will get to you within 24 hours',
-          {
-            duration: 5,
-            type: 'success',
-          }
-        )
+
+        toast('Sent successfully. Thank you very much. I will get to you within 24 hours')
+        
       } catch (error) {
         console.log(error);
       }
@@ -53,12 +49,10 @@ const FooterForm = () => {
     } else {
       
           setButtonValue('Send')
-          toast.notify(
-            'Some field are still empty. Please make sure you fill in all the information required. Thank you.',
-            {
-              duration: 5,
-            }
-          )
+
+           toast(
+             'Some field are still empty. Please make sure you fill in all the information required. Thank you.'
+           )
       
           
     }
@@ -131,12 +125,7 @@ const FooterForm = () => {
           {buttonValue}
         </Button>
       </Flex>
-      <ToastContainer
-        align={'right'}
-        position={'top'}
-        id="toast-comp-3"
-        primaryColor="#FFCB2B"
-      />
+      <ToastContainer />
     </Container>
   )
 }
