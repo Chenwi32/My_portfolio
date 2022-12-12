@@ -41,7 +41,7 @@ const Dashboard = () => {
 
       <Container maxW={1200}>
         <HStack p={3} w={'100%'} justifyContent={'flex-end'} mb={10}>
-          <Link href="/createPost">
+          <Link href="/createpost">
             <Button
               bg={'brand.100'}
               color={'brand.300'}
