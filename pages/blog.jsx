@@ -17,6 +17,7 @@ import {
 } from 'firebase/firestore'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
+
 import { db } from '../firebase'
 
 const Blog = () => {
@@ -24,15 +25,13 @@ const Blog = () => {
 
   // Query the first page of docs
 
-  const firstPostscollection = query(collection(db, 'blogposts'), limit(1))
-
   const [posts, setPosts] = useState([])
   const [documentSnapshots, setdocumentSnapshots] = useState([])
   const [firstpage, setFirstPage] = useState(0)
 
-  const getPosts = async () => {
+  const firstPostscollection = query(collection(db, 'blogposts'), limit(1))
 
-    
+  const getPosts = async () => {
     setdocumentSnapshots(await getDocs(firstPostscollection))
 
     const results = []
@@ -40,17 +39,20 @@ const Blog = () => {
     documentSnapshots.forEach((snapshot) => {
       results.push(snapshot.data())
     })
-setFirstPage(1)
+
+    setFirstPage()
     setPosts(results)
   }
 
+  useEffect(() => {
+    getPosts()
+  }, [firstpage])
+
   const getNextPost = async () => {
     const newPost = []
-if (documentSnapshots.docs.length <= 0) return
+    if (documentSnapshots.docs.length <= 0) return
     const lastVisible =
       documentSnapshots.docs[documentSnapshots.docs.length - 1]
-
-    
 
     // Construct a new query starting at this document,
     // get the next 1 posts.
@@ -69,10 +71,6 @@ if (documentSnapshots.docs.length <= 0) return
     setPosts(newPost)
   }
 
-  useEffect(() => {
-    getPosts()
-  }, [firstpage])
-
   return (
     <>
       <Head>
@@ -90,7 +88,7 @@ if (documentSnapshots.docs.length <= 0) return
               {post.postTitle}
             </Heading>
 
-            <Heading fontSize={'1.1rem'} mb={5}>
+            <Heading fontSize={'1.2rem'} mb={5}>
               {post.postHeadline}
             </Heading>
 
