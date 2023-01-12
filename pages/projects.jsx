@@ -35,6 +35,7 @@ function projects() {
       link: 'https://lost-and-found-8ef8a.firebaseapp.com/',
       status: 'In progress',
     },
+
     {
       id: 1,
       title: 'MAfriculture',
@@ -44,6 +45,7 @@ function projects() {
       link: 'https://mafriculture.web.app/',
       status: 'In progress',
     },
+
     {
       id: 2,
       title: "Titus' Funiture",
@@ -52,6 +54,17 @@ function projects() {
         'I did this for a client who came to me with nothing but poor images. His end gaol was that people views his work and contact him. I used Next.Js for front-end, Chakra UI Library, Cloudinary for images and vercel hosting',
       link: 'https://titus-furniture.vercel.app/',
       status: 'Delivered',
+    },
+
+    {
+      id: 3,
+      title: 'NALDCCAM',
+      headline:
+        'A website for a green agriculture company which talks about the company, their projects and the services they offer.',
+      details:
+        "I am working on this closely with the company's project manager, structuring it to their taste. I used Next.Js for front-end, Chakra UI Library, GitHub to manage the content and vercel hosting",
+      link: 'https://naldccm.vercel.app/',
+      status: 'In progress',
     },
   ]
   const [projId, setProjId] = useState(0)
