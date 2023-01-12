@@ -3,6 +3,7 @@ import {
   Button,
   Container,
   Heading,
+  Image,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -33,6 +34,8 @@ function projects() {
       details:
         'The problems people face due to lost of their document got me thinking, what if we create a digital solution to make the search easier and faster? So after a careful thought, I finally created "237 Lost and Found" to help in the search. I built The front-end with Next.Js and hosted it on firebase, using firestore for the database. I used Chakra UI for as my UI library',
       link: 'https://lost-and-found-8ef8a.firebaseapp.com/',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1673511256/237_lefz1i.png',
       status: 'In progress',
     },
 
@@ -43,6 +46,8 @@ function projects() {
       details:
         'MAfriculture is an e-commerce platform that sells African arts and crafts. I used Next.Js for the front-end, Chakra UI Library, Flutterwave for payment API and firebase hosting',
       link: 'https://mafriculture.web.app/',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1673511258/maf_kjbl6x.png',
       status: 'In progress',
     },
 
@@ -53,6 +58,8 @@ function projects() {
       details:
         'I did this for a client who came to me with nothing but poor images. His end gaol was that people views his work and contact him. I used Next.Js for front-end, Chakra UI Library, Cloudinary for images and vercel hosting',
       link: 'https://titus-furniture.vercel.app/',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1673511257/titus_pikz13.png',
       status: 'Delivered',
     },
 
@@ -64,6 +71,8 @@ function projects() {
       details:
         "I am working on this closely with the company's project manager, structuring it to their taste. I used Next.Js for front-end, Chakra UI Library, GitHub to manage the content and vercel hosting",
       link: 'https://naldccm.vercel.app/',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1673511257/naldccam_sympke.png',
       status: 'In progress',
     },
   ]
@@ -86,8 +95,8 @@ function projects() {
         {projectData.map((project) => {
           return (
             <Box
-              boxShadow={'lg'}
-              border={'1px solid #05bd33'}
+              boxShadow={'xl'}
+              bg='brand.300'
               borderRadius={'lg'}
               p={isLargerThan1000 ? '1.5rem 2rem' : 5}
               key={project.id}
@@ -95,8 +104,15 @@ function projects() {
               <Heading fontSize={'1.3rem'} mb={5}>
                 {project.title}
               </Heading>
-
-              <Text mb={5} className="projects__text">
+ <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+              >
+                <Image src={project.image} mb={5}
+              /> 
+                      </a>
+                           <Text mb={5} className="projects__text">
                 {project.headline}
               </Text>
 
