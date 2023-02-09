@@ -1,0 +1,20 @@
+.embla {
+  overflow: hidden;
+  margin: .5em auto;
+  width: 300px;
+}
+.embla__container {
+  
+  display: flex;
+}
+.embla__slide {
+  position: relative;
+  flex: 0 0 100%;
+  font-size: 1.5rem;
+}
+
+.homepage_p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #05bd33;
+}

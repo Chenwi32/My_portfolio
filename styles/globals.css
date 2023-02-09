@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-right: 0;
+
+  /* Hide Scroolbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  background: linear-gradient(
+    35deg,
+    hsl(135deg 100% 92%) 0%,
+    hsl(135deg 100% 93%) 6%,
+    hsl(135deg 100% 94%) 11%,
+    hsl(134deg 100% 95%) 16%,
+    hsl(134deg 100% 96%) 21%,
+    hsl(134deg 100% 97%) 25%,
+    hsl(133deg 100% 98%) 29%,
+    hsl(134deg 100% 97%) 33%,
+    hsl(134deg 100% 96%) 37%,
+    hsl(134deg 100% 95%) 40%,
+    hsl(135deg 100% 93%) 44%,
+    hsl(135deg 100% 92%) 47%,
+    hsl(135deg 100% 92%) 50%,
+    hsl(135deg 100% 93%) 53%,
+    hsl(134deg 100% 95%) 56%,
+    hsl(134deg 100% 96%) 59%,
+    hsl(134deg 100% 97%) 61%,
+    hsl(133deg 100% 98%) 64%,
+    hsl(134deg 100% 97%) 67%,
+    hsl(134deg 100% 96%) 71%,
+    hsl(134deg 100% 95%) 74%,
+    hsl(135deg 100% 94%) 78%,
+    hsl(135deg 100% 93%) 84%,
+    hsl(135deg 100% 92%) 98%
+  );
+  
+}
+
+hr{
+  border: 5px rgb(47, 214, 5);
+}
+
+.chakra-ui-light,
+#__next{
+  width: 100vw !important;
+  min-width: fit-content ;
+  padding: 0;
+  padding-right: 0;
+  margin: auto;
+  margin-right: 0;
+  background-color: inherit;
+}
+
+#contact{
+  margin-left: .5rem;
+}
+
+.btn {
+  background-color: #05bd33;
+  padding: 0.9em;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #ffff;
+}
+
+.btn:hover {
+  background-color: #07d83b;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-family: serif;
+  font-weight: 800;
+  width: fit-content;
+  border-bottom: 5px solid #05bd33;
+  margin: 0 0 1.2em;
+}
+
+.secondary_title {
+  font-size: 1.3rem;
+  font-family: serif;
+  font-weight: 800;
+  width: fit-content;
+  margin: 0 0 0.5em;
+  color: #05bd33;
+}
+
+.imojie {
+  font-size: 1.6rem;
+  color: rgb(47, 214, 5);
+  font-weight: 800;
+}
+
+.imojie2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgb(47, 214, 5);
+}
+
+.Unfoundpage_imojie {
+  font-size: 2rem;
+  color: rgb(47, 214, 5);
+  font-weight: 800;
+}
+
+.Unfoundpage_link-imojie {
+  font-size: 1rem;
+  color: rgb(47, 214, 5);
+  font-weight: 800;
+}
+
+
+@media (max-width: 900px) {
+  
+
+  .btn {
+    padding: 0.7em;
+    font-size: 0.7rem;
+  }
+
+}
+
+@media (max-width: 450px) {
+    .layout_container {
+    width: fit-content;
+  }
+}
+
