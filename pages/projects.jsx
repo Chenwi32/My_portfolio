@@ -79,12 +79,12 @@ function projects() {
       id: 4,
       title: 'Vitroscript',
       headline:
-        'A website for a green agriculture company which talks about the company, their projects and the services they offer.',
+        'A website for a start-up writing company based in Cameroon with one of branches in Sierra Leone',
       details:
-        "I am working on this closely with the company's project manager, structuring it to their taste. I used Next.Js for front-end, Chakra UI Library, GitHub for the version control and vercel hosting",
-      link: 'https://naldccm.vercel.app/',
+        "I am working closely with the founder of company. Features of the project include a dashboard where an admin can create blog posts to be viewed by others, template page where people can download templates. I used Next.Js for front-end, Chakra UI Library, GitHub for the version control and vercel hosting",
+      link: 'https://vitroscript.vercel.app/',
       image:
-        'https://res.cloudinary.com/dphx0rfui/image/upload/v1673511257/naldccam_sympke.png',
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1675978544/vitro_sfqrrk.jpg',
       status: 'In progress',
     },
   ]
