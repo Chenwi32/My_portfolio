@@ -1,4 +1,4 @@
-import { Container } from '@chakra-ui/react'
+
 import Head from 'next/head'
 import HomePage from '../components/homePage'
 
