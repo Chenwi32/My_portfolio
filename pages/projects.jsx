@@ -33,7 +33,7 @@ function projects() {
       headline: 'A web application that helps in the search of lost documents',
       details:
         'The problems people face due to lost of their document got me thinking, what if we create a digital solution to make the search easier and faster? So after a careful thought, I finally created "237 Lost and Found" to help in the search. I built The front-end with Next.Js and hosted it on firebase, using firestore for the database. I used Chakra UI for as my UI library',
-      link: 'https://lost-and-found-8ef8a.firebaseapp.com/',
+      link: 'https://237-lost-and-found.vercel.app/',
       image:
         'https://res.cloudinary.com/dphx0rfui/image/upload/v1673511256/237_lefz1i.png',
       status: 'In progress',
@@ -79,9 +79,9 @@ function projects() {
       id: 4,
       title: 'Vitroscript',
       headline:
-        'A website for a start-up writing company based in Cameroon with one of branches in Sierra Leone',
+        "A website for a start-up writing company based in Cameroon with one of it's branches in Sierra Leone",
       details:
-        "I am working closely with the founder of company. Features of the project include a dashboard where an admin can create blog posts to be viewed by others, template page where people can download templates. I used Next.Js for front-end, Chakra UI Library, GitHub for the version control and vercel hosting",
+        "I am working closely with the founder of company. Features of the project include a dashboard where an admin can create blog posts to be viewed by others, template page where people can download templates. I used Next.Js for front-end, Chakra UI Library, GitHub for the version control, vercel hosting and it's serverless with firebase for the database",
       link: 'https://vitroscript.vercel.app/',
       image:
         'https://res.cloudinary.com/dphx0rfui/image/upload/v1675978544/vitro_sfqrrk.jpg',
