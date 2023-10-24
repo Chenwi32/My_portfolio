@@ -17,6 +17,7 @@ const Aboutme = () => {
   return (
     <>
       <Head>
+        <meta name="description" content="About Chenwi Eugene Cameroonian web developer IT technician and buildind construction technician" />
         <title>About Eugene</title>
       </Head>
       <Container
