@@ -11,7 +11,7 @@ import { useState } from 'react'
 
 import styles from '../components/styles/Footer.module.css'
 
-import { addDoc, doc, getFirestore, setDoc } from 'firebase/firestore'
+import {  doc, setDoc } from 'firebase/firestore'
 
 import { db } from '../firebase'
 

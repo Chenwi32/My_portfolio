@@ -10,7 +10,7 @@ import {
   Text,
   useMediaQuery,
 } from '@chakra-ui/react'
-import { async } from '@firebase/util'
+
 import {
   collection,
   getDocs,

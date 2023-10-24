@@ -14,20 +14,20 @@ const Dashboard = () => {
   const [myMessages, setMyMessages] = useState([])
 
   const getMessages = async () => {
-    // Query all Id cards
+    // Query all mesages
     const messageQuery = query(messagecollection)
 
-    // get id cards
+    // get messages
     const querySnapshot = await getDocs(messageQuery)
 
-    // Map through the ids and add them to a new array
+    // Map through the messages and add them to a new array
     const results = []
 
     querySnapshot.forEach((snapshot) => {
       results.push(snapshot.data())
     })
 
-    // assign the new array to the foundIds
+    // assign the new array to the new messages
     setMyMessages(results)
   }
 

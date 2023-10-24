@@ -3,7 +3,10 @@ import {
   Flex,
   Heading,
   Image,
+  List,
+  ListItem,
   Text,
+  UnorderedList,
   useMediaQuery,
 } from '@chakra-ui/react'
 import Head from 'next/head'
@@ -22,8 +25,14 @@ const Aboutme = () => {
         p={5}
         maxW={900}
         mb={10}
+        fontFamily={'Poppins'}
       >
-        <Heading w={'fit-content'} borderBottom={'5px solid #05bd33'} mb={5}>
+        <Heading
+          fontFamily={'Andika'}
+          w={'fit-content'}
+          borderBottom={'5px solid #05bd33'}
+          mb={5}
+        >
           About Me
         </Heading>
 
@@ -32,12 +41,12 @@ const Aboutme = () => {
           about me. I am just a nobody trying to gain value in your eyes
         </Text>
         <Text mb={5}>
-          Let me introduce nyself formaly My Name is Chenwi Eugene. I am from
+          Let me introduce myself formaly my name is Chenwi Eugene. I am from
           Cameroon a country in West Africa. Talking about me career wise I must
           say that I have had a very funny path in life . I sarted out as a
           building construction technician after completing high school studying
           civil engineering, then later down the line I found my passion in
-          software engineering —Two unrelated yet related fields. I am driven by
+          software engineering —two unrelated yet related fields. I am driven by
           the hunger for common solutions to problems that plague the day to day
           life of the common man.
         </Text>
@@ -49,7 +58,67 @@ const Aboutme = () => {
           and click on "Projects".
         </Text>
 
-        <Heading w={'fit-content'} borderBottom={'5px solid #05bd33'} mb={5}>
+        <Heading
+          fontFamily={'Andika'}
+          w={'fit-content'}
+          borderBottom={'5px solid #05bd33'}
+          mb={5}
+        >
+          Work Experience
+        </Heading>
+
+        <Heading
+          fontFamily={'Andika'}
+          fontSize={'1.5rem'}
+          color={'brand.100'}
+          mb={2}
+        >
+          Most Recent
+        </Heading>
+
+        <Text mb={5}>
+          I recently worked as a technical administrative assistant at ADES-UK.
+          I handled a variety of tasks in the company ranging from graphic
+          designing, scheduling meetings, etc, and I built an online platform
+          where people were applying for Services from everywhere in the world
+          and the team could manage the data from applicants with ease.
+        </Text>
+
+        <Heading
+          fontFamily={'Andika'}
+          fontSize={'1.5rem'}
+          color={'brand.100'}
+          mb={2}
+        >
+          Current
+        </Heading>
+
+        <UnorderedList mb={5}>
+          <ListItem>
+            I am currently working as a computer science tutor at WeCare school
+            complex
+          </ListItem>
+          <ListItem>
+            I am offering a training program aimed at preparing students for the
+            fast-changing job market. More on that at
+            <a
+              href="https://encadev.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            > &#x1F517; ENCADEV</a>{' '}
+            
+          </ListItem>
+          <ListItem>
+            I am also volunteering as a building construction technician.
+          </ListItem>
+        </UnorderedList>
+
+        <Heading
+          fontFamily={'Andika'}
+          w={'fit-content'}
+          borderBottom={'5px solid #05bd33'}
+          mb={5}
+        >
           Uses
         </Heading>
 
@@ -59,7 +128,12 @@ const Aboutme = () => {
         </Text>
         <Image src="/images/tools.jpeg" width={630} height={350} mb={5} />
 
-        <Heading fontSize={'1.5rem'} color={'brand.100'} mb={2}>
+        <Heading
+          fontFamily={'Andika'}
+          fontSize={'1.5rem'}
+          color={'brand.100'}
+          mb={2}
+        >
           Desktop Setup
         </Heading>
 
@@ -71,7 +145,12 @@ const Aboutme = () => {
           <Text>Webcam </Text>
         </Flex>
 
-        <Heading fontSize={'1.5rem'} color={'brand.100'} mb={2}>
+        <Heading
+          fontFamily={'Andika'}
+          fontSize={'1.5rem'}
+          color={'brand.100'}
+          mb={2}
+        >
           Development Tools
         </Heading>
 
@@ -82,9 +161,17 @@ const Aboutme = () => {
           <Text>Firebase </Text>
           <Text>Netlify</Text>
           <Text>Heruku</Text>
+          <Text>Canva</Text>
+          <Text>Figma</Text>
+
         </Flex>
 
-        <Heading fontSize={'1.5rem'} color={'brand.100'} mb={2}>
+        <Heading
+          fontFamily={'Andika'}
+          fontSize={'1.5rem'}
+          color={'brand.100'}
+          mb={2}
+        >
           Languages
         </Heading>
 
@@ -96,7 +183,12 @@ const Aboutme = () => {
           <Text>SQL / Postgres</Text>
         </Flex>
 
-        <Heading fontSize={'1.5rem'} color={'brand.100'} mb={ 2}>
+        <Heading
+          fontFamily={'Andika'}
+          fontSize={'1.5rem'}
+          color={'brand.100'}
+          mb={2}
+        >
           Frameworks
         </Heading>
 
