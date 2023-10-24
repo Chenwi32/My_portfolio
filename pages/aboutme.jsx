@@ -42,9 +42,9 @@ const Aboutme = () => {
           about me. I am just a nobody trying to gain value in your eyes
         </Text>
         <Text mb={5}>
-          Let me introduce myself formaly my name is Chenwi Eugene. I am from
-          Cameroon a country in West Africa. Talking about me career wise I must
-          say that I have had a very funny path in life . I sarted out as a
+          Let me introduce myself formaly. My name is Chenwi Eugene. I am from
+          Cameroon a country in West-Africa. Talking about me career wise I must
+          say that I have had a very funny path in life. I sarted out as a
           building construction technician after completing high school studying
           civil engineering, then later down the line I found my passion in
           software engineering —two unrelated yet related fields. I am driven by
