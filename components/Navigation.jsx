@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import Link from 'next/link'
 import React from 'react'
 import ThemeSwitch from './ThemeSwitch'
@@ -8,6 +8,7 @@ import {
   Button,
   Container,
   Flex,
+  Image,
   Menu,
   MenuButton,
   MenuGroup,
@@ -45,8 +46,8 @@ const Navigation = () => {
             priority={true}
             className={styles.logo}
             id="profile"
-            width={100}
-            height={60}
+            width={"80px"}
+            h={"50px"}
           />
         </Link>
 

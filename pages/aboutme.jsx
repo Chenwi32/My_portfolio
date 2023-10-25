@@ -127,7 +127,7 @@ const Aboutme = () => {
           Here are the things I use in my day to day life in my journey to
           become a software engineer
         </Text>
-        <Image src="/images/tools.jpeg" width={630} height={350} mb={5} />
+        <Image src="/images/tools.jpeg" width={630} mb={5} />
 
         <Heading
           fontFamily={'Andika'}
