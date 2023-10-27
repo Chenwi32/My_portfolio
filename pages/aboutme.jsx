@@ -38,7 +38,7 @@ const Aboutme = () => {
         </Heading>
 
         <Text mb={5}>
-          First, I will like to thank you for taking your precious time to know
+          First, I would like to thank you for taking your precious time to know
           about me. I am just a nobody trying to gain value in your eyes
         </Text>
         <Text mb={5}>
