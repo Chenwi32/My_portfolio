@@ -16,15 +16,17 @@ export const EmblaCarousel = () => {
     <div className={styles.embla} ref={emblaRef}>
       <div className={styles.embla__container}>
         <div className={styles.embla__slide}>
+          <p className={styles.homepage_p}>Software Engineer</p>
+        </div>
+
+        <div className={styles.embla__slide}>
           <p className={styles.homepage_p}>Web Developer</p>
         </div>
-        
-        <div className={styles.embla__slide}>
-          <p className={styles.homepage_p}>Digital Marketer</p>
-        </div>
+
         <div className={styles.embla__slide}>
           <p className={styles.homepage_p}> Graphic Designer</p>
         </div>
+
         <div className={styles.embla__slide}>
           <p className={styles.homepage_p}>Entrepreneur</p>
         </div>

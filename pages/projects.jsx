@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Container,
+  Flex,
   Heading,
   Image,
   Modal,
@@ -21,11 +22,85 @@ import React, { useState } from 'react'
 
 function projects() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const {
+    isOpen: isOpen2,
+    onOpen: onOpen2,
+    onClose: onClose2,
+  } = useDisclosure()
 
   const [isLargerThan700] = useMediaQuery('(min-width: 700px)')
 
   const [isLargerThan1000] = useMediaQuery('(min-width: 1000px)')
 
+  const graphics = [
+    {
+      id: 0,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304190/1_pjypvd.png',
+    },
+    {
+      id: 1,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304174/2_k613ov.png',
+    },
+    {
+      id: 2,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304331/Untitled_design_hohid7.png',
+    },
+    {
+      id: 3,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304211/A_vgvczw.png',
+    },
+    {
+      id: 4,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304638/1_yyrp6v.png',
+    },
+    {
+      id: 5,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304419/briefing_uzdjpr.png',
+    },
+
+    {
+      id: 6,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304150/CMNA_Flyer_1_zt5dw6.png',
+    },
+    {
+      id: 7,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709304495/Engineering_Career_tfhjmj.png',
+    },
+    {
+      id: 8,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709308132/french_promo_m1mdlp.png',
+    },
+    {
+      id: 9,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709307960/1_quvpwj.png',
+    },
+    {
+      id: 10,
+      title: '',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709307967/2_v3uta3.png',
+    },
+  ]
   const projectData = [
     {
       id: 0,
@@ -87,8 +162,20 @@ function projects() {
         'https://res.cloudinary.com/dphx0rfui/image/upload/v1675978544/vitro_sfqrrk.jpg',
       status: 'In progress',
     },
+    {
+      id: 5,
+      title: 'Goldas',
+      headline: 'A web form that collects user inputs and stores in a database',
+      details:
+        'This is a user friendly multi-step form that collect data for a currency project of the Golden Age Soccer (Goldas) organisation that is ongoing.',
+      link: 'https://goldas.vercel.app/',
+      image:
+        'https://res.cloudinary.com/dphx0rfui/image/upload/v1709300455/goldas-form-image_z09ywu.png',
+      status: 'In progress',
+    },
   ]
   const [projId, setProjId] = useState(0)
+  const [graphicId, setGraphicId] = useState(0)
   return (
     <Container
       minW={isLargerThan700 ? 'unset' : '100vw'}
@@ -97,12 +184,15 @@ function projects() {
       maxW={1200}
       mb={10}
     >
-      <Heading className="title">My personal projects</Heading>
+      <Heading fontFamily={'Andika'} className="title">
+        Web Projects
+      </Heading>
 
       <SimpleGrid
         columns={isLargerThan700 ? 2 : 1}
         spacing={isLargerThan700 ? '24px' : '2rem'}
         margin={'auto'}
+        mb={10}
       >
         {projectData.map((project) => {
           return (
@@ -185,6 +275,104 @@ function projects() {
                         See project
                       </a>
                     </Button>
+                  </ModalFooter>
+                </ModalContent>
+              </Modal>
+            </Box>
+          )
+        })}
+      </SimpleGrid>
+      <Heading fontFamily={'Andika'} className="title">
+        Graphic Designs
+      </Heading>
+
+      <SimpleGrid
+        columns={isLargerThan700 ? 2 : 1}
+        spacing={isLargerThan700 ? '24px' : '2rem'}
+        margin={'auto'}
+        mb={10}
+      >
+        {graphics.map((graphic) => {
+          return (
+            <Box
+              boxShadow={'xl'}
+              bg="brand.300"
+              borderRadius={'lg'}
+              p={isLargerThan1000 ? '1.5rem 2rem' : 5}
+              key={graphic.id}
+            >
+              <Heading fontSize={'1.3rem'} mb={5}>
+                {graphic.title}
+              </Heading>
+              <Image
+                onClick={() => {
+                  setGraphicId(graphic.id)
+                  onOpen2()
+                }}
+                src={graphic.image}
+                mb={5}
+              />
+              <Text mb={5} className="projects__text">
+                {graphic.headline}
+              </Text>
+
+              <Box
+                height={0}
+                width={'100%'}
+                borderBottom={'1px solid #05bd33'}
+                mb={5}
+              />
+
+              <Modal isOpen={isOpen2} onClose={onClose2}>
+                <ModalOverlay />
+                <ModalContent
+                  maxW={'unset'}
+                  w={isLargerThan1000 ? 900 : '100%'}
+                  h={500}
+                  bg={''}
+                  display={'flex'}
+                  alignItems={'center'}
+                  justifyContent={'center'}
+                >
+                  <ModalHeader>{graphics[graphicId].title}</ModalHeader>
+                  <ModalCloseButton color={'#fff'} />
+                  <ModalBody>
+                    <Image margin={'auto'} w={'100%'} h={600} src={graphics[graphicId].image} />
+                  </ModalBody>
+
+                  <ModalFooter w={'100%'}>
+                    <Flex w={'100%'} justifyContent={'space-between'}>
+                      <Button
+                        _hover={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.137)',
+                          color: '#fff',
+                        }}
+                        onClick={() => {
+                          if (graphicId <= 0) {
+                            return
+                          } else {
+                            setGraphicId(graphicId - 1)
+                          }
+                        }}
+                      >
+                        &#60;
+                      </Button>
+                      <Button
+                        _hover={{
+                          backgroundColor: 'rgba(0, 0, 0, 0.137)',
+                          color: '#fff',
+                        }}
+                        onClick={() => {
+                          if (graphicId + 1 >= graphics.length) {
+                            return
+                          } else {
+                            setGraphicId(graphicId + 1)
+                          }
+                        }}
+                      >
+                        &#62;
+                      </Button>
+                    </Flex>
                   </ModalFooter>
                 </ModalContent>
               </Modal>

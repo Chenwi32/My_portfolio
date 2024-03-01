@@ -7,7 +7,7 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import { useState } from 'react'
+import { createElement, useState } from 'react'
 
 import styles from '../components/styles/Footer.module.css'
 
@@ -48,6 +48,17 @@ const CreatePost = () => {
       setPostTitle('')
     } else {
       alert('You forgot some fields')
+    }
+  }
+
+  const createPost = () => {
+    switch (data) {
+      case text: createElement('p')
+        
+        break;
+    
+      default:
+        break;
     }
   }
 

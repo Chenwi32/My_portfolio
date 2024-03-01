@@ -1,9 +1,10 @@
+import { Container } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 export default () => {
-  const [count, setCount] = useState(5)
+  const [count, setCount] = useState(10)
   const router = useRouter()
   setInterval(() => {
     if (count <= 0) return
@@ -12,9 +13,9 @@ export default () => {
 
   setTimeout(() => {
     router.push('/')
-  }, 5000)
+  }, 10000)
   return (
-    <div>
+    <Container maxW={1200} pb={10}>
       <h1>
         Uhh!! <span className="Unfoundpage_imojie">&#x1F615;</span>
       </h1>
@@ -22,14 +23,14 @@ export default () => {
       <p>
         Go back home
         <Link href="/">
-          <a>
+          
             <span className="Unfoundpage_link-imojie"> here &#x1F517;</span>
-          </a>
+        
         </Link>
       </p>
       <h3>Or</h3>
-      <p>You will be re-directed in 5 seconds</p>
+      <p>You will be re-directed in 10 seconds</p>
       <h5>{count}</h5>
-    </div>
+    </Container>
   )
 }

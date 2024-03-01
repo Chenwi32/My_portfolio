@@ -10,6 +10,7 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 const Aboutme = () => {
   const [isLargerThan700] = useMediaQuery('(min-width: 700px)')
@@ -17,7 +18,10 @@ const Aboutme = () => {
   return (
     <>
       <Head>
-        <meta name="description" content="About Chenwi Eugene Cameroonian web developer IT technician and buildind construction technician" />
+        <meta
+          name="description"
+          content="About Chenwi Eugene Cameroonian web developer IT technician and buildind construction technician"
+        />
         <title>About Eugene</title>
       </Head>
       <Container
@@ -36,7 +40,6 @@ const Aboutme = () => {
         >
           About Me
         </Heading>
-
         <Text mb={5}>
           First, I would like to thank you for taking your precious time to know
           about me. I am just a nobody trying to gain value in your eyes
@@ -51,14 +54,12 @@ const Aboutme = () => {
           the hunger for common solutions to problems that plague the day to day
           life of the common man.
         </Text>
-
         <Text mb={5}>
           I have spent about a year learning and practicing how to code,
           creating project ideas and working on them. If you'd like to know more
           about the projects I have been doing, check the menu bar at the top
           and click on "Projects".
         </Text>
-
         <Heading
           fontFamily={'Andika'}
           w={'fit-content'}
@@ -67,7 +68,21 @@ const Aboutme = () => {
         >
           Work Experience
         </Heading>
-
+        <Text mb={5}>
+          I have experience working with various companies and institutions as a
+          freelancer. My work with them has ranged from graphic designing{' '}
+          <b>
+            ( creating flyers, brochures, roll-ups, banners, 3D graphics with
+            AutoCad , etc), building websites, building web forms, creating
+            their social media pages, configuring emails with the custom domain
+            name of their company,
+          </b>{' '}
+          etc.
+        </Text>
+        Take a look at some of{' '}
+        <Text fontWeight={'bold'} color={'brand.100'} as={'span'}>
+          <Link href={'projects'}>&#x1F517; my desings</Link>
+        </Text>
         <Heading
           fontFamily={'Andika'}
           fontSize={'1.5rem'}
@@ -76,7 +91,6 @@ const Aboutme = () => {
         >
           Most Recent
         </Heading>
-
         <Text mb={5}>
           I recently worked as a technical administrative assistant at ADES-UK.
           I handled a variety of tasks in the company ranging from graphic
@@ -84,7 +98,6 @@ const Aboutme = () => {
           where people were applying for Services from everywhere in the world
           and the team could manage the data from applicants with ease.
         </Text>
-
         <Heading
           fontFamily={'Andika'}
           fontSize={'1.5rem'}
@@ -93,27 +106,29 @@ const Aboutme = () => {
         >
           Current
         </Heading>
-
         <UnorderedList mb={5}>
           <ListItem>
-            I am currently working as a computer science tutor at WeCare school
-            complex
+            I am currently working as a computer science and ICT tutor at WeCare
+            school complex
           </ListItem>
           <ListItem>
             I am offering a training program aimed at preparing students for the
             fast-changing job market. More on that at
-            <a
-              href="https://encadev.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            > &#x1F517; ENCADEV</a>{' '}
-            
+            <Text fontWeight={'bold'} color={'brand.100'} as={'span'}>
+              <Link
+                rel="noopener noreferrer"
+                target="_blank"
+                href={'https://encadev.vercel.app/'}
+              >
+                {' '}
+                &#x1F517; ENCADEV
+              </Link>
+            </Text>
           </ListItem>
           <ListItem>
             I am also volunteering as a building construction technician.
           </ListItem>
         </UnorderedList>
-
         <Heading
           fontFamily={'Andika'}
           w={'fit-content'}
@@ -122,13 +137,11 @@ const Aboutme = () => {
         >
           Uses
         </Heading>
-
         <Text mb={5}>
           Here are the things I use in my day to day life in my journey to
           become a software engineer
         </Text>
         <Image src="/images/tools.jpeg" width={630} mb={5} />
-
         <Heading
           fontFamily={'Andika'}
           fontSize={'1.5rem'}
@@ -137,7 +150,6 @@ const Aboutme = () => {
         >
           Desktop Setup
         </Heading>
-
         <Flex flexDirection={'column'} mb={5}>
           <Text>HP-ProBook </Text>
           <Text>HP mouse </Text>
@@ -145,7 +157,6 @@ const Aboutme = () => {
           <Text>Wireless Speaker </Text>
           <Text>Webcam </Text>
         </Flex>
-
         <Heading
           fontFamily={'Andika'}
           fontSize={'1.5rem'}
@@ -154,7 +165,6 @@ const Aboutme = () => {
         >
           Development Tools
         </Heading>
-
         <Flex flexDirection={'column'} mb={5}>
           <Text>VS Code</Text>
           <Text>Chrome Browser</Text>
@@ -164,9 +174,7 @@ const Aboutme = () => {
           <Text>Heruku</Text>
           <Text>Canva</Text>
           <Text>Figma</Text>
-
         </Flex>
-
         <Heading
           fontFamily={'Andika'}
           fontSize={'1.5rem'}
@@ -175,15 +183,14 @@ const Aboutme = () => {
         >
           Languages
         </Heading>
-
         <Flex flexDirection={'column'} mb={5}>
           <Text>Javascript</Text>
           <Text>Html</Text>
           <Text>Css</Text>
           <Text>Python</Text>
           <Text>SQL / Postgres</Text>
+          <Text>C</Text>
         </Flex>
-
         <Heading
           fontFamily={'Andika'}
           fontSize={'1.5rem'}
@@ -192,7 +199,6 @@ const Aboutme = () => {
         >
           Frameworks
         </Heading>
-
         <Flex flexDirection={'column'}>
           <Text>React / Next Js</Text>
           <Text>Flask</Text>
