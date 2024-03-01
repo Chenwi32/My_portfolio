@@ -50,15 +50,18 @@ const Aboutme = () => {
           say that I have had a very funny path in life. I sarted out as a
           building construction technician after completing high school studying
           civil engineering, then later down the line I found my passion in
-          software engineering —two unrelated yet related fields. I am driven by
-          the hunger for common solutions to problems that plague the day to day
-          life of the common man.
+          software engineering — two unrelated yet related fields right!!
+          <br />
+          <b>I got my BSC in software Engineering in 2023.</b> <br />I am driven
+          by the hunger for basic solutions to problems that plague the day to
+          day life of the common man.
         </Text>
         <Text mb={5}>
-          I have spent about a year learning and practicing how to code,
-          creating project ideas and working on them. If you'd like to know more
-          about the projects I have been doing, check the menu bar at the top
-          and click on "Projects".
+          I have been in the industry for a couple of years, creating project,
+          building people's projects, teaching people how to code, teaching
+          computer science and ICT. If you'd like to know more about the
+          projects I have been doing, check the menu bar at the top and click on
+          "Projects".
         </Text>
         <Heading
           fontFamily={'Andika'}
@@ -81,7 +84,7 @@ const Aboutme = () => {
         </Text>
         Take a look at some of{' '}
         <Text fontWeight={'bold'} color={'brand.100'} as={'span'}>
-          <Link href={'projects'}>&#x1F517; my desings</Link>
+          <Link href={'/projects#graphics'}>&#x1F517; my desings</Link>
         </Text>
         <Heading
           fontFamily={'Andika'}

@@ -282,7 +282,7 @@ function projects() {
           )
         })}
       </SimpleGrid>
-      <Heading fontFamily={'Andika'} className="title">
+      <Heading id="graphics" fontFamily={'Andika'} className="title">
         Graphic Designs
       </Heading>
 
@@ -337,7 +337,12 @@ function projects() {
                   <ModalHeader>{graphics[graphicId].title}</ModalHeader>
                   <ModalCloseButton color={'#fff'} />
                   <ModalBody>
-                    <Image margin={'auto'} w={'100%'} h={600} src={graphics[graphicId].image} />
+                    <Image
+                      margin={'auto'}
+                      w={'100%'}
+                      h={600}
+                      src={graphics[graphicId].image}
+                    />
                   </ModalBody>
 
                   <ModalFooter w={'100%'}>
