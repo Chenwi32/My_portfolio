@@ -73,12 +73,7 @@ const Aboutme = () => {
         </Heading>
         <Text mb={5}>
           I have experience working with various companies and institutions as a
-          freelancer. My work with them has ranged from graphic designing{' '}
-          <b>
-            ( creating flyers, brochures, roll-ups, banners, 3D graphics with
-            AutoCad , etc), building websites, building web forms, creating
-            their social media pages, configuring emails with the custom domain
-            name of their company,
+          freelancer. My work with them has ranged from <b>building websites, building web forms, graphic designing ( creating flyers, brochures, roll-ups, banners, 3D graphics with AutoCad , etc), creating their social media pages, configuring emails with the custom domain name of their company,
           </b>{' '}
           etc.
         </Text>
